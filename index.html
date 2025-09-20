@@ -118,6 +118,56 @@
             }
             .nav-menu.active {
                 display: flex;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(17, 24, 39, 0.95);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+                border-radius: 0 0 1rem 1rem;
+                border-top: 1px solid rgba(139, 92, 246, 0.3);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            }
+            
+            /* Mobile-specific body padding to account for fixed header */
+            body {
+                padding-top: 0;
+            }
+            
+            /* Improve mobile typography */
+            h1 {
+                font-size: 2.5rem !important;
+                line-height: 1.2 !important;
+            }
+            
+            h2 {
+                font-size: 1.8rem !important;
+            }
+            
+            h3 {
+                font-size: 1.4rem !important;
+            }
+            
+            /* Mobile container padding */
+            .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+        }
+        
+        /* Tablet responsive adjustments */
+        @media (max-width: 1024px) {
+            .grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            /* Adjust hero section for tablets */
+            .hero-content {
+                text-align: center;
             }
         }
 
@@ -188,7 +238,7 @@
     <!-- Header & Navigation -->
     <header class="sticky top-0 z-50 bg-gray-900/30 backdrop-blur-xl">
         <nav class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#home" class="text-3xl font-bold text-white font-['Montserrat'] text-colorful-gradient">Sangavi</a>
+            <a href="#home" class="text-2xl md:text-3xl font-bold text-white font-['Montserrat'] text-colorful-gradient">Sangavi</a>
             <button id="menu-button" class="md:hidden text-white focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -205,25 +255,25 @@
         </nav>
     </header>
 
-    <main class="max-w-7xl mx-auto p-8">
+    <main class="max-w-7xl mx-auto p-4 md:p-8">
         
         <!-- Hero Section -->
-        <section id="home" class="flex flex-col items-center justify-center min-h-screen text-center md:text-left pt-16 relative">
-            <div class="glass-card p-12 rounded-3xl mx-auto md:mx-0 w-full max-w-2xl text-center">
-                <h1 class="text-6xl md:text-7xl font-extrabold leading-tight text-white mb-4 font-['Montserrat'] text-colorful-gradient">
-                    Hi, I'm <span class="text-colorful-gradient-2">A Software Developer</span>
+        <section id="home" class="flex flex-col items-center justify-center min-h-screen text-center pt-16 px-4 md:px-8 relative">
+            <div class="glass-card p-6 md:p-12 rounded-3xl mx-auto w-full max-w-4xl text-center">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-4 font-['Montserrat'] text-colorful-gradient">
+                    Hi, I'm <span class="text-colorful-gradient-2 block sm:inline">A Software Developer</span>
                 </h1>
-                <p class="text-xl md:text-2xl font-light mb-6 text-gray-300">
+                <p class="text-lg sm:text-xl md:text-2xl font-light mb-6 text-gray-300 px-2">
                     A Passionate full-stack developer specializing in AI, Cloud, and robust software solutions.
                 </p>
-                <!-- New contact links section -->
-                <div class="flex flex-wrap justify-center items-center gap-4 text-lg mt-6 text-center"></div>
+                <!-- Contact links section -->
+                <div class="flex flex-wrap justify-center items-center gap-3 sm:gap-4 text-base sm:text-lg mt-6">
                     <a href="mailto:sangavikavic@gmail.com" class="hover:text-highlight-color hover:text-orange-300 transition-colors duration-300">Email</a>
-                    <span class="text-gray-500">|</span>
+                    <span class="text-gray-500 hidden sm:inline">|</span>
                     <a href="https://www.linkedin.com/in/sangavi-c-649382204" target="_blank" class="hover:text-highlight-color hover:text-orange-300 transition-colors duration-300">LinkedIn</a>
-                    <span class="text-gray-500">|</span>
+                    <span class="text-gray-500 hidden sm:inline">|</span>
                     <a href="https://github.com/sangavikavi/" target="_blank" class="hover:text-highlight-color hover:text-orange-300 transition-colors duration-300">GitHub</a>
-                    <span class="text-gray-500">|</span>
+                    <span class="text-gray-500 hidden sm:inline">|</span>
                     <a href="http://leetcode.com/profile/sangavi28" target="_blank" class="hover:text-highlight-color hover:text-orange-300 transition-colors duration-300">LeetCode</a>
                 </div>
             </div>
@@ -246,72 +296,72 @@
         <div class="my-16 neon-divider max-w-4xl mx-auto"></div>
 
         <!-- Skills Section -->
-        <section id="skills" class="py-20">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-center text-white font-['Montserrat'] text-colorful-gradient">Technical Skills</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section id="skills" class="py-12 md:py-20 px-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 md:mb-12 text-center text-white font-['Montserrat'] text-colorful-gradient">Technical Skills</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
                 <!-- Languages Card -->
-                <div class="glass-card p-8">
-                    <h3 class="text-2xl font-semibold mb-4 text-pink-300">Languages</h3>
+                <div class="glass-card p-4 md:p-8">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-pink-300">Languages</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-pill rounded-full px-4 py-2 text-sm">Python</span>
-                        <span class="skill-pill rounded-full px-4 py-2 text-sm">Java</span>
-                        <span class="skill-pill rounded-full px-4 py-2 text-sm">SQL</span>
-                        <span class="skill-pill rounded-full px-4 py-2 text-sm">JavaScript</span>
-                        <span class="skill-pill rounded-full px-4 py-2 text-sm">TypeScript</span>
+                        <span class="skill-pill rounded-full px-3 py-2 text-xs md:text-sm">Python</span>
+                        <span class="skill-pill rounded-full px-3 py-2 text-xs md:text-sm">Java</span>
+                        <span class="skill-pill rounded-full px-3 py-2 text-xs md:text-sm">SQL</span>
+                        <span class="skill-pill rounded-full px-3 py-2 text-xs md:text-sm">JavaScript</span>
+                        <span class="skill-pill rounded-full px-3 py-2 text-xs md:text-sm">TypeScript</span>
                     </div>
                 </div>
                 <!-- Frameworks Card -->
-                <div class="glass-card p-8">
-                    <h3 class="text-2xl font-semibold mb-4 text-purple-300">Frameworks & Libraries</h3>
+                <div class="glass-card p-4 md:p-8">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-purple-300">Frameworks & Libraries</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-pill rounded-full px-4 py-2 text-sm">Angular</span>
-                        <span class="skill-pill rounded-full px-4 py-2 text-sm">React</span>
-                        <span class="skill-pill rounded-full px-4 py-2 text-sm">Flask</span>
-                        <span class="skill-pill rounded-full px-4 py-2 text-sm">FastAPI</span>
-                        <span class="skill-pill rounded-full px-4 py-2 text-sm">LangChain</span>
-                        <span class="skill-pill rounded-full px-4 py-2 text-sm">LangGraph</span>
-                        <span class="skill-pill rounded-full px-4 py-2 text-sm">Google ADK</span>
+                        <span class="skill-pill rounded-full px-3 py-2 text-xs md:text-sm">Angular</span>
+                        <span class="skill-pill rounded-full px-3 py-2 text-xs md:text-sm">React</span>
+                        <span class="skill-pill rounded-full px-3 py-2 text-xs md:text-sm">Flask</span>
+                        <span class="skill-pill rounded-full px-3 py-2 text-xs md:text-sm">FastAPI</span>
+                        <span class="skill-pill rounded-full px-3 py-2 text-xs md:text-sm">LangChain</span>
+                        <span class="skill-pill rounded-full px-3 py-2 text-xs md:text-sm">LangGraph</span>
+                        <span class="skill-pill rounded-full px-3 py-2 text-xs md:text-sm">Google ADK</span>
                     </div>
                 </div>
                 <!-- Concepts Card -->
-                <div class="glass-card p-8">
-                    <h3 class="text-2xl font-semibold mb-4 text-orange-300">Concepts</h3>
+                <div class="glass-card p-4 md:p-8">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-orange-300">Concepts</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-pill rounded-full px-4 py-2 text-sm">OOP</span>
-                        <span class="skill-pill rounded-full px-4 py-2 text-sm">REST API</span>
-                        <span class="skill-pill rounded-full px-4 py-2 text-sm">Data Structures</span>
-                        <span class="skill-pill rounded-full px-4 py-2 text-sm">Design Patterns</span>
-                        <span class="skill-pill rounded-full px-4 py-2 text-sm">Agile</span>
-                        <span class="skill-pill rounded-full px-4 py-2 text-sm">CI/CD</span>
+                        <span class="skill-pill rounded-full px-3 py-2 text-xs md:text-sm">OOP</span>
+                        <span class="skill-pill rounded-full px-3 py-2 text-xs md:text-sm">REST API</span>
+                        <span class="skill-pill rounded-full px-3 py-2 text-xs md:text-sm">Data Structures</span>
+                        <span class="skill-pill rounded-full px-3 py-2 text-xs md:text-sm">Design Patterns</span>
+                        <span class="skill-pill rounded-full px-3 py-2 text-xs md:text-sm">Agile</span>
+                        <span class="skill-pill rounded-full px-3 py-2 text-xs md:text-sm">CI/CD</span>
                     </div>
                 </div>
                 <!-- Cloud & AI Card -->
-                <div class="glass-card p-8">
-                    <h3 class="text-2xl font-semibold mb-4 text-teal-300">Cloud & AI</h3>
+                <div class="glass-card p-4 md:p-8">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-teal-300">Cloud & AI</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-pill rounded-full px-4 py-2 text-sm">Google Cloud Platform (GCP)</span>
-                        <span class="skill-pill rounded-full px-4 py-2 text-sm">Generative AI Tools</span>
+                        <span class="skill-pill rounded-full px-3 py-2 text-xs md:text-sm">Google Cloud Platform (GCP)</span>
+                        <span class="skill-pill rounded-full px-3 py-2 text-xs md:text-sm">Generative AI Tools</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Divider -->
-        <div class="my-16 neon-divider max-w-4xl mx-auto"></div>
+        <div class="my-12 md:my-16 neon-divider max-w-4xl mx-auto"></div>
 
         <!-- Experience Section -->
-        <section id="experience" class="py-20">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-center text-white font-['Montserrat'] text-colorful-gradient">Experience</h2>
-            <div class="space-y-8">
+        <section id="experience" class="py-12 md:py-20 px-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 md:mb-12 text-center text-white font-['Montserrat'] text-colorful-gradient">Experience</h2>
+            <div class="space-y-6 md:space-y-8 max-w-4xl mx-auto">
                 <!-- Hashedin SDE -->
-                <div class="glass-card p-8 relative overflow-hidden">
-                    <div class="flex justify-between items-center mb-4 flex-wrap">
-                        <h3 class="text-2xl font-semibold text-highlight-color">Software Development Engineer in Test</h3>
-                        <p class="text-gray-400">Sept. 2024 – Present</p>
+                <div class="glass-card p-4 md:p-8 relative overflow-hidden">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4 gap-2">
+                        <h3 class="text-lg md:text-2xl font-semibold text-highlight-color">Software Development Engineer in Test</h3>
+                        <p class="text-sm md:text-base text-gray-400">Sept. 2024 – Present</p>
                     </div>
-                    <h4 class="text-lg font-bold text-gray-200 mb-2">Hashedin by Deloitte</h4>
-                    <p class="text-base text-gray-400 mb-4">Bengaluru, KA</p>
-                    <ul class="custom-list space-y-4 text-gray-300">
+                    <h4 class="text-base md:text-lg font-bold text-gray-200 mb-2">Hashedin by Deloitte</h4>
+                    <p class="text-sm md:text-base text-gray-400 mb-4">Bengaluru, KA</p>
+                    <ul class="custom-list space-y-3 md:space-y-4 text-sm md:text-base text-gray-300">
                         <li>Developing intelligent agents using LangGraph and Agent Development Kit (ADK) to automate decision-making and user interactions.</li>
                         <li>Building and deploying GenAI-driven applications for use cases like product recommendations, conversational assistants, and workflow automation.</li>
                         <li>Integrating vector databases and external APIs with GenAI models to enhance context-aware responses.</li>
@@ -321,13 +371,13 @@
                 </div>
 
                 <!-- Hashedin Trainee -->
-                <div class="glass-card p-8 relative overflow-hidden">
-                    <div class="flex justify-between items-center mb-4 flex-wrap">
-                        <h3 class="text-2xl font-semibold text-highlight-color">Trainee Engineer</h3>
-                        <p class="text-gray-400">June 2024 – Sept 2024</p>
+                <div class="glass-card p-4 md:p-8 relative overflow-hidden">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4 gap-2">
+                        <h3 class="text-lg md:text-2xl font-semibold text-highlight-color">Trainee Engineer</h3>
+                        <p class="text-sm md:text-base text-gray-400">June 2024 – Sept 2024</p>
                     </div>
-                    <h4 class="text-lg font-bold text-gray-200 mb-2">Hashedin by Deloitte</h4>
-                    <p class="text-base text-gray-400 mb-4">Bengaluru, KA</p>
+                    <h4 class="text-base md:text-lg font-bold text-gray-200 mb-2">Hashedin by Deloitte</h4>
+                    <p class="text-sm md:text-base text-gray-400 mb-4">Bengaluru, KA</p>
                     <ul class="custom-list space-y-4 text-gray-300">
                         <li>Gained hands-on experience in software development and testing across various domains, including GenAI, Angular, and Cloud.</li>
                         <li>Actively contributed to multiple projects, utilizing both manual and automation testing tools like Selenium and JMeter to ensure high-quality deliverables.</li>
@@ -339,27 +389,27 @@
         </section>
 
         <!-- Divider -->
-        <div class="my-16 neon-divider max-w-4xl mx-auto"></div>
+        <div class="my-12 md:my-16 neon-divider max-w-4xl mx-auto"></div>
 
         <!-- Projects Section -->
-        <section id="projects" class="py-20">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-center text-white font-['Montserrat'] text-colorful-gradient">Projects</h2>
-            <div class="grid md:grid-cols-2 gap-8">
+        <section id="projects" class="py-12 md:py-20 px-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 md:mb-12 text-center text-white font-['Montserrat'] text-colorful-gradient">Projects</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
                 <!-- LLM Chatbot Project -->
-                <div class="glass-card p-8">
-                    <h3 class="text-2xl font-semibold text-highlight-color mb-2">LLM Chatbot with Document Embedding</h3>
-                    <p class="text-sm text-gray-400 mb-4">Python, Flask, LLM Integration, PostgreSQL, Docker</p>
-                    <ul class="custom-list space-y-4 text-gray-300">
+                <div class="glass-card p-4 md:p-8">
+                    <h3 class="text-lg md:text-2xl font-semibold text-highlight-color mb-2">LLM Chatbot with Document Embedding</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mb-4">Python, Flask, LLM Integration, PostgreSQL, Docker</p>
+                    <ul class="custom-list space-y-3 md:space-y-4 text-sm md:text-base text-gray-300">
                         <li>Developed a chatbot using Langchain in Python to process documents by creating chunks and embeddings for efficient retrieval.</li>
                         <li>Integrated pgvector for embedding storage, enabling accurate document-specific question answering.</li>
                         <li>Built a Flask backend API to handle user queries, manage document uploads, and facilitate communication with the LLM.</li>
                     </ul>
                 </div>
                 <!-- AI Product Recommender Project -->
-                <div class="glass-card p-8">
-                    <h3 class="text-2xl font-semibold text-highlight-color mb-2">AI Product Recommender Agent for Shopify</h3>
-                    <p class="text-sm text-gray-400 mb-4">Google ADK, Gemini API, Shopify Theme App Extensions, GraphQL</p>
-                    <ul class="custom-list space-y-4 text-gray-300">
+                <div class="glass-card p-4 md:p-8">
+                    <h3 class="text-lg md:text-2xl font-semibold text-highlight-color mb-2">AI Product Recommender Agent for Shopify</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mb-4">Google ADK, Gemini API, Shopify Theme App Extensions, GraphQL</p>
+                    <ul class="custom-list space-y-3 md:space-y-4 text-sm md:text-base text-gray-300">
                         <li>Developed an AI-powered chatbot integrated into Shopify storefronts to provide real-time, personalized product recommendations.</li>
                         <li>Built a backend API server with Google ADK to orchestrate conversational flow and product recommendation logic, while integrating data from Shopify storefront endpoints using GraphQL queries for dynamic product retrieval.</li>
                         <li>Designed a responsive chat widget using JavaScript, Liquid, CSS for seamless integration into Shopify themes.</li>
@@ -369,42 +419,42 @@
         </section>
 
         <!-- Divider -->
-        <div class="my-16 neon-divider max-w-4xl mx-auto"></div>
+        <div class="my-12 md:my-16 neon-divider max-w-4xl mx-auto"></div>
 
         <!-- Awards & Certifications Section -->
-        <section id="awards" class="py-20">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-center text-white font-['Montserrat'] text-colorful-gradient">Awards & Certifications</h2>
-            <div class="glass-card p-8 awards-list flex flex-col items-start space-y-4">
-                <a href="https://shorturl.at/2OJi9" target="_blank" class="text-lg hover:text-orange-300 transition-colors">
+        <section id="awards" class="py-12 md:py-20 px-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 md:mb-12 text-center text-white font-['Montserrat'] text-colorful-gradient">Awards & Certifications</h2>
+            <div class="glass-card p-4 md:p-8 awards-list flex flex-col items-start space-y-3 md:space-y-4 max-w-4xl mx-auto">
+                <a href="https://shorturl.at/2OJi9" target="_blank" class="text-sm md:text-lg hover:text-orange-300 transition-colors">
                     Build with Vertex AI Technical Expert Badge - Google Cloud
                 </a>
-                <a href="https://shorturl.at/29QBc" target="_blank" class="text-lg hover:text-orange-300 transition-colors">
+                <a href="https://shorturl.at/29QBc" target="_blank" class="text-sm md:text-lg hover:text-orange-300 transition-colors">
                     Certified Professional Cloud Architect - Google Cloud
                 </a>
-                <a href="https://shorturl.at/efW9k" target="_blank" class="text-lg hover:text-orange-300 transition-colors">
+                <a href="https://shorturl.at/efW9k" target="_blank" class="text-sm md:text-lg hover:text-orange-300 transition-colors">
                     Oracle Certified AI Foundations Associate - Oracle
                 </a>
             </div>
         </section>
 
         <!-- Divider -->
-        <div class="my-16 neon-divider max-w-4xl mx-auto"></div>
+        <div class="my-12 md:my-16 neon-divider max-w-4xl mx-auto"></div>
 
         <!-- Education Section -->
-        <section id="education" class="py-20">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-center text-white font-['Montserrat'] text-colorful-gradient">Education</h2>
-            <div class="grid md:grid-cols-2 gap-8">
+        <section id="education" class="py-12 md:py-20 px-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 md:mb-12 text-center text-white font-['Montserrat'] text-colorful-gradient">Education</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
                 <!-- V.S.B Engineering College -->
-                <div class="glass-card p-8">
-                    <h3 class="text-2xl font-semibold text-highlight-color mb-2">B.E., Computer Science and Engineering</h3>
-                    <p class="text-gray-400">V.S.B Engineering College, Karur, TN</p>
-                    <p class="text-gray-400">Aug. 2020 – May 2024 —— 87%</p>
+                <div class="glass-card p-4 md:p-8">
+                    <h3 class="text-lg md:text-2xl font-semibold text-highlight-color mb-2">B.E., Computer Science and Engineering</h3>
+                    <p class="text-sm md:text-base text-gray-400">V.S.B Engineering College, Karur, TN</p>
+                    <p class="text-sm md:text-base text-gray-400">Aug. 2020 – May 2024 —— 87%</p>
                 </div>
                 <!-- R.N Matric Higher Secondary School -->
-                <div class="glass-card p-8">
-                    <h3 class="text-2xl font-semibold text-highlight-color mb-2">HSC</h3>
-                    <p class="text-gray-400">R.N Matric Higher Secondary School, Karur, TN</p>
-                    <p class="text-gray-400">June. 2018 – April 2020 —— 85%</p>
+                <div class="glass-card p-4 md:p-8">
+                    <h3 class="text-lg md:text-2xl font-semibold text-highlight-color mb-2">HSC</h3>
+                    <p class="text-sm md:text-base text-gray-400">R.N Matric Higher Secondary School, Karur, TN</p>
+                    <p class="text-sm md:text-base text-gray-400">June. 2018 – April 2020 —— 85%</p>
                 </div>
             </div>
         </section>
