@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Use Inter and Montserrat fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --bg-start: #0f172a;
+            --bg-end: #1a202c;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.15);
+            --text-color: #e2e8f0;
+            --gradient-1: #6d28d9;
+            --gradient-2: #8b5cf6;
+            --gradient-3: #db2777;
+            --gradient-4: #ea580c;
+            --highlight-color: #fca5a5;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-start);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Animated background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(135deg, var(--gradient-1) 0%, var(--gradient-2) 25%, var(--gradient-3) 50%, var(--gradient-4) 75%, var(--gradient-1) 100%);
+            background-size: 400% 400%;
+            animation: move_bg 30s linear infinite;
+            z-index: -2;
+            opacity: 0.15;
+            filter: blur(80px);
+        }
+
+        @keyframes move_bg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Glassmorphism effect for cards and sections */
+        .glass-card {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--card-border);
+            border-radius: 1.5rem;
+            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1), 0 4px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .glass-card:hover {
+            transform: scale(1.02);
+            box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.2), 0 8px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Colorful text gradients */
+        .text-colorful-gradient {
+            background: linear-gradient(to right, var(--gradient-1), var(--gradient-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-colorful-gradient-2 {
+            background: linear-gradient(to right, var(--gradient-3), var(--gradient-4));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Skill pill styling */
+        .skill-pill {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Smooth scroll for navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Neon divider */
+        .neon-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #8b5cf6, #ec4899, #f97316, transparent);
+            filter: blur(1px);
+            animation: neon-pulse 5s infinite;
+        }
+
+        @keyframes neon-pulse {
+            0% { transform: scaleX(0.5); opacity: 0.5; }
+            50% { transform: scaleX(1); opacity: 1; }
+            100% { transform: scaleX(0.5); opacity: 0.5; }
+        }
+
+        /* Responsive navigation menu for mobile */
+        @media (max-width: 767px) {
+            .nav-menu {
+                display: none;
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+        }
+
+        /* Custom list style */
+        .custom-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .custom-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            /* Apply the colorful gradient to the star icon */
+            background: linear-gradient(to right, var(--gradient-1), var(--gradient-2), var(--gradient-3), var(--gradient-4));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.25rem;
+            line-height: 1;
+            /* Enhance the glow effect with multiple colors */
+            text-shadow: 
+                0 0 5px var(--gradient-1),
+                0 0 10px var(--gradient-2),
+                0 0 15px var(--gradient-3),
+                0 0 20px var(--gradient-4);
+            transition: transform 0.3s ease;
+        }
+        
+        .custom-list li:hover::before {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        /* Custom style for the Awards section links */
+        .awards-list a {
+            position: relative;
+            padding-left: 1.5rem;
+            display: block;
+        }
+
+        .awards-list a::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            /* Apply the colorful gradient to the star icon */
+            background: linear-gradient(to right, var(--gradient-1), var(--gradient-2), var(--gradient-3), var(--gradient-4));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.25rem;
+            line-height: 1;
+            /* Enhance the glow effect with multiple colors */
+            text-shadow: 
+                0 0 5px var(--gradient-1),
+                0 0 10px var(--gradient-2),
+                0 0 15px var(--gradient-3),
+                0 0 20px var(--gradient-4);
+            transition: transform 0.3s ease;
+        }
+        
+        .awards-list a:hover::before {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-gray-900/30 backdrop-blur-xl">
+        <nav class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#home" class="text-3xl font-bold text-white font-['Montserrat'] text-colorful-gradient">Sangavi</a>
+            <button id="menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <ul id="nav-menu" class="nav-menu md:flex md:space-x-8">
+                <li><a href="#about" class="font-bold hover:text-pink-400 transition-colors duration-300">About</a></li>
+                <li><a href="#skills" class="font-bold hover:text-purple-400 transition-colors duration-300">Skills</a></li>
+                <li><a href="#experience" class="font-bold hover:text-indigo-400 transition-colors duration-300">Experience</a></li>
+                <li><a href="#projects" class="font-bold hover:text-orange-400 transition-colors duration-300">Projects</a></li>
+                <li><a href="#awards" class="font-bold hover:text-yellow-400 transition-colors duration-300">Awards</a></li>
+                <li><a href="#education" class="font-bold hover:text-teal-400 transition-colors duration-300">Education</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-8">
+        
+        <!-- Hero Section -->
+        <section id="home" class="flex flex-col items-center justify-center min-h-screen text-center md:text-left pt-16 relative">
+            <div class="glass-card p-12 rounded-3xl mx-auto md:mx-0 w-full max-w-2xl text-center">
+                <h1 class="text-6xl md:text-7xl font-extrabold leading-tight text-white mb-4 font-['Montserrat'] text-colorful-gradient">
+                    Hi, I'm <span class="text-colorful-gradient-2">A Software Developer</span>
+                </h1>
+                <p class="text-xl md:text-2xl font-light mb-6 text-gray-300">
+                    A Passionate full-stack developer specializing in AI, Cloud, and robust software solutions.
+                </p>
+                <!-- New contact links section -->
+                <div class="flex flex-wrap justify-center items-center gap-4 text-lg mt-6 text-center"></div>
+                    <a href="mailto:sangavikavic@gmail.com" class="hover:text-highlight-color hover:text-orange-300 transition-colors duration-300">Email</a>
+                    <span class="text-gray-500">|</span>
+                    <a href="https://www.linkedin.com/in/sangavi-c-649382204" target="_blank" class="hover:text-highlight-color hover:text-orange-300 transition-colors duration-300">LinkedIn</a>
+                    <span class="text-gray-500">|</span>
+                    <a href="https://github.com/sangavikavi/" target="_blank" class="hover:text-highlight-color hover:text-orange-300 transition-colors duration-300">GitHub</a>
+                    <span class="text-gray-500">|</span>
+                    <a href="http://leetcode.com/profile/sangavi28" target="_blank" class="hover:text-highlight-color hover:text-orange-300 transition-colors duration-300">LeetCode</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="my-16 neon-divider max-w-4xl mx-auto"></div>
+
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-8 text-center text-white font-['Montserrat'] text-colorful-gradient">About Me</h2>
+            <div class="glass-card p-8 text-center">
+                <p class="text-lg md:text-xl leading-relaxed text-gray-300">
+                    A dedicated and innovative Software Development Engineer with a strong foundation in modern web technologies, AI frameworks, and cloud computing. I thrive on building intelligent, scalable, and reliable applications that solve complex problems. My experience ranges from developing intelligent agents for workflow automation to contributing to full-cycle software development and ensuring product quality through rigorous testing. I am passionate about learning and applying new technologies to create impactful solutions.
+                </p>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="my-16 neon-divider max-w-4xl mx-auto"></div>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-center text-white font-['Montserrat'] text-colorful-gradient">Technical Skills</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Languages Card -->
+                <div class="glass-card p-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-pink-300">Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill rounded-full px-4 py-2 text-sm">Python</span>
+                        <span class="skill-pill rounded-full px-4 py-2 text-sm">Java</span>
+                        <span class="skill-pill rounded-full px-4 py-2 text-sm">SQL</span>
+                        <span class="skill-pill rounded-full px-4 py-2 text-sm">JavaScript</span>
+                        <span class="skill-pill rounded-full px-4 py-2 text-sm">TypeScript</span>
+                    </div>
+                </div>
+                <!-- Frameworks Card -->
+                <div class="glass-card p-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-300">Frameworks & Libraries</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill rounded-full px-4 py-2 text-sm">Angular</span>
+                        <span class="skill-pill rounded-full px-4 py-2 text-sm">React</span>
+                        <span class="skill-pill rounded-full px-4 py-2 text-sm">Flask</span>
+                        <span class="skill-pill rounded-full px-4 py-2 text-sm">FastAPI</span>
+                        <span class="skill-pill rounded-full px-4 py-2 text-sm">LangChain</span>
+                        <span class="skill-pill rounded-full px-4 py-2 text-sm">LangGraph</span>
+                        <span class="skill-pill rounded-full px-4 py-2 text-sm">Google ADK</span>
+                    </div>
+                </div>
+                <!-- Concepts Card -->
+                <div class="glass-card p-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-orange-300">Concepts</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill rounded-full px-4 py-2 text-sm">OOP</span>
+                        <span class="skill-pill rounded-full px-4 py-2 text-sm">REST API</span>
+                        <span class="skill-pill rounded-full px-4 py-2 text-sm">Data Structures</span>
+                        <span class="skill-pill rounded-full px-4 py-2 text-sm">Design Patterns</span>
+                        <span class="skill-pill rounded-full px-4 py-2 text-sm">Agile</span>
+                        <span class="skill-pill rounded-full px-4 py-2 text-sm">CI/CD</span>
+                    </div>
+                </div>
+                <!-- Cloud & AI Card -->
+                <div class="glass-card p-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-teal-300">Cloud & AI</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill rounded-full px-4 py-2 text-sm">Google Cloud Platform (GCP)</span>
+                        <span class="skill-pill rounded-full px-4 py-2 text-sm">Generative AI Tools</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="my-16 neon-divider max-w-4xl mx-auto"></div>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-center text-white font-['Montserrat'] text-colorful-gradient">Experience</h2>
+            <div class="space-y-8">
+                <!-- Hashedin SDE -->
+                <div class="glass-card p-8 relative overflow-hidden">
+                    <div class="flex justify-between items-center mb-4 flex-wrap">
+                        <h3 class="text-2xl font-semibold text-highlight-color">Software Development Engineer in Test</h3>
+                        <p class="text-gray-400">Sept. 2024 – Present</p>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-200 mb-2">Hashedin by Deloitte</h4>
+                    <p class="text-base text-gray-400 mb-4">Bengaluru, KA</p>
+                    <ul class="custom-list space-y-4 text-gray-300">
+                        <li>Developing intelligent agents using LangGraph and Agent Development Kit (ADK) to automate decision-making and user interactions.</li>
+                        <li>Building and deploying GenAI-driven applications for use cases like product recommendations, conversational assistants, and workflow automation.</li>
+                        <li>Integrating vector databases and external APIs with GenAI models to enhance context-aware responses.</li>
+                        <li>Contributed to automation testing initiatives using Playwright, TypeScript, and Selenium, ensuring functional reliability and performance validation.</li>
+                        <li><span class="font-bold text-white">Technology Stack:</span> LangGraph, Google ADK, LangChain, Python, Conversational Agent, Agent Deployment, Agentspace, React, Playwright, TypeScript, Selenium, End-to-End Automation Testing, Manual Testing.</li>
+                    </ul>
+                </div>
+
+                <!-- Hashedin Trainee -->
+                <div class="glass-card p-8 relative overflow-hidden">
+                    <div class="flex justify-between items-center mb-4 flex-wrap">
+                        <h3 class="text-2xl font-semibold text-highlight-color">Trainee Engineer</h3>
+                        <p class="text-gray-400">June 2024 – Sept 2024</p>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-200 mb-2">Hashedin by Deloitte</h4>
+                    <p class="text-base text-gray-400 mb-4">Bengaluru, KA</p>
+                    <ul class="custom-list space-y-4 text-gray-300">
+                        <li>Gained hands-on experience in software development and testing across various domains, including GenAI, Angular, and Cloud.</li>
+                        <li>Actively contributed to multiple projects, utilizing both manual and automation testing tools like Selenium and JMeter to ensure high-quality deliverables.</li>
+                        <li>Engaged in full-cycle software development, encompassing coding, testing, and deployment, while collaborating with cross-functional teams to drive project success.</li>
+                        <li><span class="font-bold text-white">Technology Stack:</span> Angular, GenAI, Typescript, Selenium, API Testing, Rest Assured, Jmeter.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="my-16 neon-divider max-w-4xl mx-auto"></div>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-center text-white font-['Montserrat'] text-colorful-gradient">Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- LLM Chatbot Project -->
+                <div class="glass-card p-8">
+                    <h3 class="text-2xl font-semibold text-highlight-color mb-2">LLM Chatbot with Document Embedding</h3>
+                    <p class="text-sm text-gray-400 mb-4">Python, Flask, LLM Integration, PostgreSQL, Docker</p>
+                    <ul class="custom-list space-y-4 text-gray-300">
+                        <li>Developed a chatbot using Langchain in Python to process documents by creating chunks and embeddings for efficient retrieval.</li>
+                        <li>Integrated pgvector for embedding storage, enabling accurate document-specific question answering.</li>
+                        <li>Built a Flask backend API to handle user queries, manage document uploads, and facilitate communication with the LLM.</li>
+                    </ul>
+                </div>
+                <!-- AI Product Recommender Project -->
+                <div class="glass-card p-8">
+                    <h3 class="text-2xl font-semibold text-highlight-color mb-2">AI Product Recommender Agent for Shopify</h3>
+                    <p class="text-sm text-gray-400 mb-4">Google ADK, Gemini API, Shopify Theme App Extensions, GraphQL</p>
+                    <ul class="custom-list space-y-4 text-gray-300">
+                        <li>Developed an AI-powered chatbot integrated into Shopify storefronts to provide real-time, personalized product recommendations.</li>
+                        <li>Built a backend API server with Google ADK to orchestrate conversational flow and product recommendation logic, while integrating data from Shopify storefront endpoints using GraphQL queries for dynamic product retrieval.</li>
+                        <li>Designed a responsive chat widget using JavaScript, Liquid, CSS for seamless integration into Shopify themes.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="my-16 neon-divider max-w-4xl mx-auto"></div>
+
+        <!-- Awards & Certifications Section -->
+        <section id="awards" class="py-20">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-center text-white font-['Montserrat'] text-colorful-gradient">Awards & Certifications</h2>
+            <div class="glass-card p-8 awards-list flex flex-col items-start space-y-4">
+                <a href="https://shorturl.at/2OJi9" target="_blank" class="text-lg hover:text-orange-300 transition-colors">
+                    Build with Vertex AI Technical Expert Badge - Google Cloud
+                </a>
+                <a href="https://shorturl.at/29QBc" target="_blank" class="text-lg hover:text-orange-300 transition-colors">
+                    Certified Professional Cloud Architect - Google Cloud
+                </a>
+                <a href="https://shorturl.at/efW9k" target="_blank" class="text-lg hover:text-orange-300 transition-colors">
+                    Oracle Certified AI Foundations Associate - Oracle
+                </a>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="my-16 neon-divider max-w-4xl mx-auto"></div>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-center text-white font-['Montserrat'] text-colorful-gradient">Education</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- V.S.B Engineering College -->
+                <div class="glass-card p-8">
+                    <h3 class="text-2xl font-semibold text-highlight-color mb-2">B.E., Computer Science and Engineering</h3>
+                    <p class="text-gray-400">V.S.B Engineering College, Karur, TN</p>
+                    <p class="text-gray-400">Aug. 2020 – May 2024 —— 87%</p>
+                </div>
+                <!-- R.N Matric Higher Secondary School -->
+                <div class="glass-card p-8">
+                    <h3 class="text-2xl font-semibold text-highlight-color mb-2">HSC</h3>
+                    <p class="text-gray-400">R.N Matric Higher Secondary School, Karur, TN</p>
+                    <p class="text-gray-400">June. 2018 – April 2020 —— 85%</p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Footer -->
+    <footer class="text-center py-8">
+        <p class="text-sm text-gray-500">
+            &copy; 2025. All rights reserved.
+        </p>
+    </footer>
+
+    <!-- JavaScript for smooth scrolling and mobile menu toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('#nav-menu a');
+            const menuButton = document.getElementById('menu-button');
+            const navMenu = document.getElementById('nav-menu');
+
+            // Smooth scrolling logic
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 60, // Offset for fixed header
+                        behavior: 'smooth'
+                    });
+                    // Close the menu after clicking on mobile
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                    }
+                });
+            });
+
+            // Mobile menu toggle
+            menuButton.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                navMenu.classList.toggle('absolute');
+                navMenu.classList.toggle('top-16');
+                navMenu.classList.toggle('left-0');
+                navMenu.classList.toggle('w-full');
+                navMenu.classList.toggle('flex-col');
+                navMenu.classList.toggle('bg-gray-900/90');
+                navMenu.classList.toggle('p-4');
+                navMenu.classList.toggle('space-y-4');
+                navMenu.classList.toggle('items-center');
+                navMenu.classList.toggle('z-40');
+            });
+        });
+    </script>
+</body>
+</html>
