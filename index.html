@@ -78,7 +78,7 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="font-display font-bold text-xl tracking-tight text-white flex items-center gap-2">
                 <span
-                    class="w-8 h-8 rounded-full bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center text-sm">SC</span>
+                    class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center text-sm font-bold">SC</span>
                 Sangavi C
             </a>
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
@@ -111,7 +111,7 @@
             </button>
         </div>
         <!-- Mobile Dropdown -->
-        <div class="md:hidden hidden bg-deep-900 border-b border-white/10 absolute w-full" id="mobile-menu">
+        <div class="md:hidden hidden bg-[#09090b] border-b border-white/10 absolute w-full" id="mobile-menu">
             <div class="flex flex-col p-4 gap-4 text-center">
                 <a href="#about" class="text-slate-300">About</a>
                 <a href="#experience" class="text-slate-300">Experience</a>
@@ -131,13 +131,13 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden">
+    <header id="about" class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-12 items-center">
 
             <div class="z-10 animate-fade-in-up">
                 <div
-                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-sm font-medium mb-6">
-                    <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/5 border border-emerald-500/10 text-emerald-400 text-sm font-medium mb-6">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                     Available for new opportunities
                 </div>
 
@@ -250,26 +250,22 @@
                     full-stack applications.</p>
             </div>
 
-            <div class="relative pl-8 md:pl-0">
-                <!-- Timeline items -->
-                <div class="relative md:grid grid-cols-2 gap-12 mb-12 animate-on-scroll">
-                    <!-- Date for Desktop -->
-                    <div class="hidden md:flex flex-col items-end pr-12 text-right relative">
-                        <div class="text-brand-400 font-bold text-xl mb-1 mt-1">Sept 2024 - Present</div>
-                        <div class="text-slate-500 font-medium">Bengaluru, Karnataka</div>
-                        <!-- Add dot for desktop timeline center -->
-                        <div
-                            class="absolute right-[-6px] top-3 w-[12px] h-[12px] rounded-full bg-brand-500 ring-4 ring-deep-900 z-10">
-                        </div>
-                    </div>
-
-                    <div class="relative timeline-item md:pl-12 md:before:hidden">
-                        <div class="md:hidden text-brand-400 font-bold mb-2">Sept 2024 - Present</div>
-                        <div class="md:hidden timeline-dot"></div>
-
-                        <div class="glass-card p-8 rounded-3xl relative">
-                            <h3 class="text-2xl font-bold text-white mb-1">Software Development Engineer (AI)</h3>
-                            <h4 class="text-brand-500 font-semibold mb-6">HashedIn by Deloitte</h4>
+            <div class="max-w-4xl mx-auto">
+                <div class="timeline-container">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item mb-12 relative animate-on-scroll">
+                        <div class="timeline-marker"></div>
+                        <div class="glass-card p-8 rounded-3xl ml-8">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white mb-1">Software Development Engineer (AI)</h3>
+                                    <h4 class="text-brand-400 font-semibold">HashedIn by Deloitte</h4>
+                                </div>
+                                <div class="text-left md:text-right">
+                                    <span class="text-sm font-bold text-white block">Sept 2024 - Present</span>
+                                    <span class="text-xs text-slate-400 block mt-0.5">Bengaluru, India</span>
+                                </div>
+                            </div>
 
                             <ul class="space-y-3 text-slate-300 text-sm leading-relaxed mb-6">
                                 <li class="flex items-start gap-3">
@@ -322,18 +318,21 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="relative md:grid grid-cols-2 gap-12 animate-on-scroll">
-                    <!-- Card on the Left (for Desktop) / Mobile timeline item -->
-                    <div
-                        class="relative timeline-item md:pr-12 md:before:hidden md:col-start-1 md:col-end-2 order-2 md:order-1">
-                        <div class="md:hidden text-brand-400 font-bold mb-2">June 2024 - Sept 2024</div>
-                        <div class="md:hidden timeline-dot"></div>
-
-                        <div class="glass-card p-8 rounded-3xl relative">
-                            <h3 class="text-2xl font-bold text-white mb-1">Trainee Software Engineer</h3>
-                            <h4 class="text-brand-500 font-semibold mb-6">HashedIn by Deloitte</h4>
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item relative animate-on-scroll">
+                        <div class="timeline-marker"></div>
+                        <div class="glass-card p-8 rounded-3xl ml-8">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white mb-1">Trainee Software Engineer</h3>
+                                    <h4 class="text-brand-400 font-semibold">HashedIn by Deloitte</h4>
+                                </div>
+                                <div class="text-left md:text-right">
+                                    <span class="text-sm font-bold text-white block">June 2024 - Sept 2024</span>
+                                    <span class="text-xs text-slate-400 block mt-0.5">Bengaluru, India</span>
+                                </div>
+                            </div>
 
                             <ul class="space-y-3 text-slate-300 text-sm leading-relaxed mb-6">
                                 <li class="flex items-start gap-3">
@@ -360,23 +359,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Date on the Right (for Desktop) -->
-                    <div
-                        class="hidden md:flex flex-col items-start pl-12 text-left relative md:col-start-2 md:col-end-3 order-1 md:order-2">
-                        <div class="text-brand-400 font-bold text-xl mb-1 mt-1">June 2024 - Sept 2024</div>
-                        <div class="text-slate-500 font-medium">Bengaluru, Karnataka</div>
-                        <!-- Add dot for desktop timeline center -->
-                        <div
-                            class="absolute left-[-6px] top-3 w-[12px] h-[12px] rounded-full bg-brand-500 ring-4 ring-deep-900 z-10">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Desktop Timeline line -->
-                <div
-                    class="hidden md:block absolute left-1/2 top-4 bottom-8 w-[2px] bg-gradient-to-b from-brand-500 to-transparent -translate-x-1/2 z-0">
-                </div>
+                </div>                
             </div>
         </div>
     </section>
@@ -410,13 +393,13 @@
                         Built autonomous planner, developer, reviewer, and testing agents that collaboratively analyzed repositories, generated code changes, executed tests, and created pull requests with human approval, reducing development effort by 60%.
                     </p>
                     <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-3 py-1 bg-deep-900 rounded-md text-xs font-mono text-slate-300">Python</span>
-                        <span class="px-3 py-1 bg-deep-900 rounded-md text-xs font-mono text-slate-300">LangGraph</span>
-                        <span class="px-3 py-1 bg-deep-900 rounded-md text-xs font-mono text-slate-300">FastAPI</span>
-                        <span class="px-3 py-1 bg-deep-900 rounded-md text-xs font-mono text-slate-300">React</span>
-                        <span class="px-3 py-1 bg-deep-900 rounded-md text-xs font-mono text-slate-300">PostgreSQL</span>
-                        <span class="px-3 py-1 bg-deep-900 rounded-md text-xs font-mono text-slate-300">pgvector</span>
-                        <span class="px-3 py-1 bg-deep-900 rounded-md text-xs font-mono text-slate-300">Docker</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-slate-300">Python</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-slate-300">LangGraph</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-slate-300">FastAPI</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-slate-300">React</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-slate-300">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-slate-300">pgvector</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-slate-300">Docker</span>
                     </div>
                 </div>
 
@@ -440,13 +423,13 @@
                         Developed a full-stack observability platform for monitoring multi-agent workflows with real-time execution tracing, prompt versioning, token usage, workflow replay, and agent evaluation to simplify debugging of production AI systems.
                     </p>
                     <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-3 py-1 bg-deep-900 rounded-md text-xs font-mono text-slate-300">Python</span>
-                        <span class="px-3 py-1 bg-deep-900 rounded-md text-xs font-mono text-slate-300">FastAPI</span>
-                        <span class="px-3 py-1 bg-deep-900 rounded-md text-xs font-mono text-slate-300">React</span>
-                        <span class="px-3 py-1 bg-deep-900 rounded-md text-xs font-mono text-slate-300">LangGraph</span>
-                        <span class="px-3 py-1 bg-deep-900 rounded-md text-xs font-mono text-slate-300">Kafka</span>
-                        <span class="px-3 py-1 bg-deep-900 rounded-md text-xs font-mono text-slate-300">PostgreSQL</span>
-                        <span class="px-3 py-1 bg-deep-900 rounded-md text-xs font-mono text-slate-300">WebSockets</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-slate-300">Python</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-slate-300">FastAPI</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-slate-300">React</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-slate-300">LangGraph</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-slate-300">Kafka</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-slate-300">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-slate-300">WebSockets</span>
                     </div>
                 </div>
 
@@ -468,10 +451,10 @@
                         Full-stack portal that ingests repositories and auto-generates architecture reports through a multi-agent workflow, cutting manual code review time by 40%.
                     </p>
                     <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-3 py-1 bg-deep-900 rounded-md text-xs font-mono text-slate-300">React</span>
-                        <span class="px-3 py-1 bg-deep-900 rounded-md text-xs font-mono text-slate-300">TypeScript</span>
-                        <span class="px-3 py-1 bg-deep-900 rounded-md text-xs font-mono text-slate-300">FastAPI</span>
-                        <span class="px-3 py-1 bg-deep-900 rounded-md text-xs font-mono text-slate-300">Python</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-slate-300">React</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-slate-300">TypeScript</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-slate-300">FastAPI</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-slate-300">Python</span>
                     </div>
                 </div>
             </div>
@@ -605,7 +588,7 @@
 
                     <div class="space-y-4 relative z-10 text-sm">
                         <a href="https://shorturl.at/29QBc" target="_blank"
-                            class="block p-4 rounded-2xl bg-deep-900/60 border border-white/5 hover:border-brand-400/50 hover:-translate-y-1 transition-all group/cert">
+                            class="block p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-400/50 hover:-translate-y-1 transition-all group/cert">
                             <div class="flex justify-between items-center">
                                 <div>
                                     <h5
@@ -621,7 +604,7 @@
                             </div>
                         </a>
                         <a href="https://shorturl.at/2OJi9" target="_blank"
-                            class="block p-4 rounded-2xl bg-deep-900/60 border border-white/5 hover:border-brand-400/50 hover:-translate-y-1 transition-all group/cert">
+                            class="block p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-400/50 hover:-translate-y-1 transition-all group/cert">
                             <div class="flex justify-between items-center">
                                 <div>
                                     <h5
@@ -637,7 +620,7 @@
                             </div>
                         </a>
                         <a href="https://www.credly.com/badges/76750356-805f-45d0-91e2-fb5ea6df6570/public_url" target="_blank"
-                            class="block p-4 rounded-2xl bg-deep-900/60 border border-white/5 hover:border-brand-400/50 hover:-translate-y-1 transition-all group/cert">
+                            class="block p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-400/50 hover:-translate-y-1 transition-all group/cert">
                             <div class="flex justify-between items-center">
                                 <div>
                                     <h5
@@ -653,7 +636,7 @@
                             </div>
                         </a>
                         <div
-                            class="block p-4 rounded-2xl bg-deep-900/60 border border-white/5 hover:border-brand-400/50 hover:-translate-y-1 transition-all group/cert">
+                            class="block p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-400/50 hover:-translate-y-1 transition-all group/cert">
                             <div class="flex justify-between items-center">
                                 <div>
                                     <h5
@@ -712,7 +695,7 @@
         </div>
     </section>
 
-    <footer class="border-t border-white/5 bg-deep-900/50 py-10 relative z-10 text-center">
+    <footer class="border-t border-white/5 bg-[#09090b]/50 py-10 relative z-10 text-center">
         <div class="flex justify-center gap-6 mb-4">
             <a href="https://www.linkedin.com/in/sangavi-c-649382204/" target="_blank"
                 class="text-slate-500 hover:text-brand-400 transition-colors">
