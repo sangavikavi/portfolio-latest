@@ -35,3 +35,21 @@ const observer = new IntersectionObserver((entries, observer) => {
 document.querySelectorAll('.animate-on-scroll').forEach(el => {
     observer.observe(el);
 });
+
+// Accordion Toggle
+document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const isExpanded = item.classList.contains('expanded');
+        
+        // Collapse all other items for clean single-open behavior
+        document.querySelectorAll('.accordion-item').forEach(otherItem => {
+            otherItem.classList.remove('expanded');
+        });
+        
+        // Toggle current item
+        if (!isExpanded) {
+            item.classList.add('expanded');
+        }
+    });
+});
