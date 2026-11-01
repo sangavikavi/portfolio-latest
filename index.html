@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="dark scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sangavi C | Agentic AI & Full-Stack SDE</title>
+    <title>Sangavi C | Software Engineer – Generative AI & Agentic Systems</title>
     <meta name="description"
-        content="Portfolio of Sangavi C, Software Development Engineer at HashedIn by Deloitte. Specializing in Agentic AI, Full-Stack, and Cloud Systems.">
+        content="Portfolio of Sangavi C, Software Development Engineer at HashedIn by Deloitte with 2.5+ years of experience specializing in Agentic AI, Multi-Agent Systems (Google ADK, LangGraph, MCP, A2A), and Full-Stack Cloud Architecture.">
+    <meta name="keywords"
+        content="Sangavi C, Software Engineer, Generative AI, Agentic Systems, Google ADK, LangGraph, LangChain, MCP, A2A, AWS Bedrock, FastAPI, React, HashedIn by Deloitte">
+    <meta name="author" content="Sangavi C">
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sangavi C | Software Engineer – Generative AI & Agentic Systems">
+    <meta property="og:description"
+        content="2.5+ Years Experience architecting enterprise Agentic AI platforms, multi-agent orchestration, and scalable full-stack cloud systems at HashedIn by Deloitte.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -28,31 +37,11 @@
                         mono: ['Fira Code', 'monospace']
                     },
                     colors: {
-                        deep: {
-                            900: '#0a0a0f',
-                            800: '#13131f',
-                            700: '#232336'
-                        },
                         brand: {
-                            400: '#60a5fa', // blue
-                            500: '#8b5cf6', // violet
-                            600: '#d946ef'  // fuchsia
-                        }
-                    },
-                    animation: {
-                        'blob': 'blob 7s infinite',
-                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-                    },
-                    keyframes: {
-                        blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        },
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca'
                         }
                     }
                 }
@@ -60,177 +49,244 @@
         }
     </script>
 
-    <!-- Custom Styles for Glass / Premium Effects -->
+    <!-- Custom High-End Aesthetics Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="antialiased selection:bg-indigo-500 selection:text-white">
 
-    <!-- Ambient Background -->
-    <div class="glow-bg">
-        <div class="glow-shape-1 animate-blob"></div>
-        <div class="glow-shape-2 animate-blob" style="animation-delay: 2s;"></div>
-        <div class="glow-shape-3 animate-blob" style="animation-delay: 4s;"></div>
+    <!-- Ambient Glowing Background Elements -->
+    <div class="glow-bg" aria-hidden="true">
+        <div class="glow-shape-1"></div>
+        <div class="glow-shape-2"></div>
+        <div class="glow-shape-3"></div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full glass-nav z-50">
+    <!-- Fixed Floating Navigation Bar -->
+    <nav class="fixed top-0 w-full glass-nav z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="font-display font-bold text-xl tracking-tight text-slate-900 flex items-center gap-2">
+            <!-- Brand Logo -->
+            <a href="#" class="font-display font-extrabold text-xl tracking-tight text-slate-100 flex items-center gap-2.5 group">
                 <span
-                    class="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center text-sm font-bold">SC</span>
-                Sangavi C
+                    class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-cyan-400 text-white flex items-center justify-center text-sm font-black shadow-md shadow-indigo-500/25 group-hover:scale-105 transition-transform">
+                    SC
+                </span>
+                <span class="text-slate-900 dark:text-white font-bold group-hover:text-indigo-400 transition-colors">
+                    Sangavi C
+                </span>
             </a>
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-                <a href="#about" class="hover:text-indigo-600 transition-colors">About</a>
-                <a href="#experience" class="hover:text-indigo-600 transition-colors">Experience</a>
-                <a href="#projects" class="hover:text-indigo-600 transition-colors">Projects</a>
-                <a href="#skills" class="hover:text-indigo-600 transition-colors">Skills</a>
-                <a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a>
+
+            <!-- Navigation Links -->
+            <div class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-400">
+                <a href="#about" class="hover:text-indigo-400 transition-colors">About</a>
+                <a href="#experience" class="hover:text-indigo-400 transition-colors">Experience</a>
+                <a href="#simulator" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5">
+                    <span>Live Simulator</span>
+                    <span class="px-1.5 py-0.5 rounded text-[10px] font-mono bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Interactive</span>
+                </a>
+                <a href="#projects" class="hover:text-indigo-400 transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-indigo-400 transition-colors">Skills</a>
+                <a href="#certifications" class="hover:text-indigo-400 transition-colors">Certifications</a>
+                <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
             </div>
-            <div class="hidden md:flex items-center gap-4">
-                <a href="https://www.linkedin.com/in/sangavi-c-649382204/" target="_blank"
-                    class="btn-outline px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-1.5">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+
+            <!-- Header Action Buttons -->
+            <div class="hidden md:flex items-center gap-3">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle-btn" aria-label="Toggle theme"
+                    class="p-2.5 rounded-full border border-slate-700/60 hover:border-indigo-500/50 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-indigo-400 transition-all">
+                    <!-- Sun Icon (shown in dark mode) -->
+                    <svg id="theme-sun-icon" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                    <!-- Moon Icon (shown in light mode) -->
+                    <svg id="theme-moon-icon" class="w-4 h-4 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+
+                <!-- LinkedIn Link -->
+                <a href="https://linkedin.com/in/sangavi-c" target="_blank" rel="noopener noreferrer"
+                    class="btn-outline px-3.5 py-2 rounded-full text-xs font-semibold flex items-center gap-1.5"
+                    aria-label="LinkedIn profile">
+                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
                         <path
                             d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                     </svg>
-                    LinkedIn
+                    <span>LinkedIn</span>
                 </a>
-                <a href="Sangavi_SDE_Updated.pdf" download
-                    class="btn-primary px-4 py-2 rounded-full text-sm font-semibold">
-                    Resume
+
+                <!-- Download Resume -->
+                <a href="Sangavi_resume.pdf" download="Sangavi_C_Resume.pdf"
+                    class="btn-primary px-4 py-2 rounded-full text-xs font-semibold flex items-center gap-1.5 shadow-sm">
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <span>Resume</span>
                 </a>
             </div>
-            <!-- Mobile Menu Btn -->
-            <button class="md:hidden text-slate-900" id="mobile-menu-btn">
+
+            <!-- Mobile Hamburger Button -->
+            <button class="lg:hidden p-2 text-slate-300 hover:text-white" id="mobile-menu-btn" aria-label="Toggle navigation menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
-                    </path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
         </div>
-        <!-- Mobile Dropdown -->
-        <div class="md:hidden hidden bg-white border-b border-slate-200 absolute w-full" id="mobile-menu">
-            <div class="flex flex-col p-4 gap-4 text-center">
-                <a href="#about" class="text-slate-600 font-medium">About</a>
-                <a href="#experience" class="text-slate-600 font-medium">Experience</a>
-                <a href="#projects" class="text-slate-600 font-medium">Projects</a>
-                <a href="#skills" class="text-slate-600 font-medium">Skills</a>
-                <a href="https://www.linkedin.com/in/sangavi-c-649382204/" target="_blank"
-                    class="text-indigo-600 font-semibold flex items-center justify-center gap-1">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                    </svg>
-                    LinkedIn
-                </a>
-                <a href="Sangavi_SDE_Updated.pdf" download class="text-indigo-600 font-medium">Download Resume</a>
+
+        <!-- Mobile Menu Drawer -->
+        <div class="lg:hidden hidden bg-white/95 dark:bg-slate-950/95 border-b border-slate-200 dark:border-white/10 px-6 py-6 absolute w-full shadow-2xl backdrop-blur-xl" id="mobile-menu">
+            <div class="flex flex-col gap-4 text-center">
+                <a href="#about" class="text-slate-300 font-medium py-1">About</a>
+                <a href="#experience" class="text-slate-300 font-medium py-1">Experience</a>
+                <a href="#simulator" class="text-indigo-400 font-semibold py-1">Live Multi-Agent Simulator</a>
+                <a href="#projects" class="text-slate-300 font-medium py-1">Projects</a>
+                <a href="#skills" class="text-slate-300 font-medium py-1">Skills</a>
+                <a href="#certifications" class="text-slate-300 font-medium py-1">Certifications</a>
+                <a href="#contact" class="text-slate-300 font-medium py-1">Contact</a>
+                <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
+                    <a href="https://linkedin.com/in/sangavi-c" target="_blank"
+                        class="btn-outline w-full py-2.5 rounded-xl text-sm font-semibold flex items-center justify-center gap-2">
+                        LinkedIn Profile
+                    </a>
+                    <a href="Sangavi_resume.pdf" download="Sangavi_C_Resume.pdf"
+                        class="btn-primary w-full py-2.5 rounded-xl text-sm font-semibold flex items-center justify-center gap-2">
+                        Download Updated Resume (PDF)
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header id="about" class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-12 items-center">
+    <!-- ==========================================================================
+         HERO SECTION: 2.5+ Years Experience & Interactive Terminal
+         ========================================================================== -->
+    <header id="about" class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-12 gap-12 items-center">
 
-            <div class="z-10 animate-fade-in-up">
-                <div
-                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-sm font-medium mb-6">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    Available for new opportunities
+            <!-- Hero Left: Bio, Experience, & Impact -->
+            <div class="lg:col-span-7 z-10 animate-fade-in-up">
+                <!-- Status Badge -->
+                <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>2.5+ Years Experience • SDE (AI) @ HashedIn by Deloitte</span>
                 </div>
 
-                <h1
-                    class="font-display font-extrabold text-5xl md:text-7xl leading-[1.1] tracking-tight mb-6 text-slate-900">
+                <!-- Main Name Header -->
+                <h1 class="font-display font-extrabold text-5xl sm:text-6xl lg:text-7xl leading-[1.08] tracking-tight mb-4 text-slate-900 dark:text-white">
                     Hi, I'm <br /><span class="text-gradient">Sangavi C</span>
                 </h1>
 
-                <p class="text-lg md:text-xl text-slate-600 font-light max-w-lg mb-8 leading-relaxed">
-                    Software Development Engineer building production-grade <strong
-                        class="text-slate-900 font-semibold">Agentic AI</strong> workflows, scalable cloud backends, and
-                    beautiful interfaces.
+                <!-- Professional Title -->
+                <h2 class="text-xl sm:text-2xl font-bold text-indigo-600 dark:text-indigo-400 mb-6 font-display">
+                    Software Engineer – Generative AI & Agentic Systems
+                </h2>
+
+                <!-- Concise Impact Summary -->
+                <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-normal max-w-xl mb-8 leading-relaxed">
+                    Building enterprise-grade <strong class="text-slate-900 dark:text-white font-semibold">Autonomous Multi-Agent Platforms</strong>, 
+                    distributed LLM orchestration pipelines, and scalable cloud systems. Led a team of 5 engineers from system design to production rollout, 
+                    driving up to 95% manual effort reduction.
                 </p>
 
-                <!-- VERY CLEAR RECRUITER HIGHLIGHTS (WHO, EXPERIENCE, WHERE) -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
-                    <div class="glass-card rounded-2xl p-5 flex items-start gap-4">
-                        <div class="p-3 bg-indigo-50 rounded-xl text-indigo-600">
-                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <p class="text-xs text-slate-500 font-medium uppercase tracking-wider mb-1">Current Role</p>
-                            <p class="text-slate-900 font-semibold">SDE @ HashedIn by Deloitte</p>
-                        </div>
+                <!-- Key Metrics Bar -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5 mb-8 max-w-xl">
+                    <div class="stat-card">
+                        <p class="text-xs uppercase tracking-wider text-slate-400 font-medium mb-1">Total Experience</p>
+                        <p class="text-2xl font-extrabold text-slate-900 dark:text-white font-display">2.5+ <span class="text-xs font-semibold text-indigo-400">Years</span></p>
+                        <p class="text-[11px] text-slate-500 mt-0.5">AI & Cloud Engineering</p>
                     </div>
-                    <div class="glass-card rounded-2xl p-5 flex items-start gap-4">
-                        <div class="p-3 bg-sky-50 rounded-xl text-sky-600">
-                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <p class="text-xs text-slate-500 font-medium uppercase tracking-wider mb-1">Experience</p>
-                            <p class="text-slate-900 font-semibold">2+ Years / AI & Full-Stack</p>
-                        </div>
+
+                    <div class="stat-card">
+                        <p class="text-xs uppercase tracking-wider text-slate-400 font-medium mb-1">Impact Metric</p>
+                        <p class="text-2xl font-extrabold text-slate-900 dark:text-white font-display">95% <span class="text-xs font-semibold text-emerald-400">Cut</span></p>
+                        <p class="text-[11px] text-slate-500 mt-0.5">Regulatory turnaround</p>
+                    </div>
+
+                    <div class="stat-card col-span-2 sm:col-span-1">
+                        <p class="text-xs uppercase tracking-wider text-slate-400 font-medium mb-1">Evaluation QA</p>
+                        <p class="text-2xl font-extrabold text-slate-900 dark:text-white font-display">94% <span class="text-xs font-semibold text-cyan-400">Accuracy</span></p>
+                        <p class="text-[11px] text-slate-500 mt-0.5">LLM-as-a-Judge</p>
                     </div>
                 </div>
 
-                <div class="flex flex-wrap items-center gap-4">
-                    <a href="#contact" class="btn-primary px-8 py-3.5 rounded-full text-sm font-bold shadow-md hover:shadow-lg flex items-center gap-2">
-                        Let's Build
-                        <svg class="w-4 h-4 text-white group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                <!-- Call to Action Buttons -->
+                <div class="flex flex-wrap items-center gap-3.5">
+                    <a href="#experience" class="btn-primary px-6 py-3 rounded-xl text-sm font-bold shadow-lg">
+                        <span>Explore Experience</span>
+                        <svg class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
+                    </a>
+
+                    <a href="#simulator" class="btn-outline px-5 py-3 rounded-xl text-sm font-semibold flex items-center gap-2">
+                        <svg class="w-4 h-4 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Live Agent Sandbox</span>
+                    </a>
+
+                    <a href="Sangavi_resume.pdf" download="Sangavi_C_Resume.pdf"
+                        class="btn-outline px-5 py-3 rounded-xl text-sm font-semibold flex items-center gap-2">
+                        <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        <span>Resume (PDF)</span>
                     </a>
                 </div>
             </div>
 
-            <!-- Visual Terminal Profile Element -->
-            <div class="z-10 hidden lg:block animate-fade-in-up" style="animation-delay: 0.2s;">
-                <div class="code-window shadow-2xl relative">
-                    <!-- Glow behind window -->
-                    <div
-                        class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-sky-500 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200">
+            <!-- Hero Right: Interactive Code & Agent Execution Terminal -->
+            <div class="lg:col-span-5 z-10">
+                <div class="code-window relative">
+                    <!-- Terminal Top Header with Switchable Tabs -->
+                    <div class="code-header">
+                        <div class="mac-dots">
+                            <div class="mac-dot mac-red"></div>
+                            <div class="mac-dot mac-yellow"></div>
+                            <div class="mac-dot mac-green"></div>
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <button class="terminal-tab-btn active" data-tab="profile">profile.ts</button>
+                            <button class="terminal-tab-btn" data-tab="pipeline">agent_trace.log</button>
+                            <button class="terminal-tab-btn" data-tab="controlplane">control_plane.mcp</button>
+                        </div>
                     </div>
-                    <div
-                        class="relative bg-[#09090b] rounded-xl border border-zinc-800 z-10 w-full h-full overflow-hidden">
-                        <div class="code-header">
-                            <div class="mac-dots">
-                                <div class="mac-dot mac-red"></div>
-                                <div class="mac-dot mac-yellow"></div>
-                                <div class="mac-dot mac-green"></div>
-                            </div>
-                            <div class="mx-auto text-xs text-slate-500 font-mono">sangavi_profile.ts</div>
-                        </div>
-                        <div class="code-body">
-                            <pre><code><span class="token-keyword">const</span> <span class="token-function">developerProfile</span> <span class="token-keyword">=</span> {
+
+                    <!-- Terminal Code Body -->
+                    <div class="code-body" id="terminal-code-body">
+                        <pre><code><span class="token-keyword">const</span> <span class="token-function">engineerProfile</span> <span class="token-keyword">=</span> {
   <span class="token-property">name</span>: <span class="token-string">"Sangavi C"</span>,
-  <span class="token-property">role</span>: <span class="token-string">"Software Development Engineer"</span>,
+  <span class="token-property">role</span>: <span class="token-string">"Software Development Engineer – AI"</span>,
+  <span class="token-property">experience</span>: <span class="token-badge">"2.5+ Years"</span>,
   <span class="token-property">company</span>: <span class="token-string">"HashedIn by Deloitte"</span>,
-  <span class="token-property">experience</span>: <span class="token-string">"2+ Years"</span>,
-  
-  <span class="token-property">coreCompetencies</span>: [
-    <span class="token-string">"Agentic AI & Multi-Agent Systems"</span>,
-    <span class="token-string">"Full-Stack (React, Angular, FastAPI)"</span>,
-    <span class="token-string">"Workflow Automation & Kafka"</span>,
-    <span class="token-string">"GCP & AWS Cloud Systems"</span>
+  <span class="token-property">location</span>: <span class="token-string">"Bengaluru, India"</span>,
+
+  <span class="token-property">specialization</span>: [
+    <span class="token-string">"Multi-Agent Orchestration (Google ADK, LangGraph)"</span>,
+    <span class="token-string">"Autonomous Systems & Model Context Protocol (MCP)"</span>,
+    <span class="token-string">"LLM-as-a-Judge Evaluation & RAG"</span>,
+    <span class="token-string">"Distributed Event-Driven Backends (Kafka, FastAPI)"</span>,
+    <span class="token-string">"Streaming UI & Full-Stack Systems (React, Angular)"</span>
   ],
-  
-  <span class="token-property">passion</span>: <span class="token-keyword">function</span>() {
-    <span class="token-keyword">return</span> <span class="token-string">"Building scalable agentic AI workflows "</span> <span class="token-keyword">+</span>
-           <span class="token-string">"with modern full-stack architectures."</span>;
-  }
+
+  <span class="token-property">leadership</span>: <span class="token-string">"Led team of 5 engineers through design & production rollout"</span>,
+  <span class="token-property">impact</span>: <span class="token-string">"95% manual effort cut | 94% evaluation accuracy | 3x Awards"</span>
 };</code></pre>
-                            <div class="mt-4 flex items-center gap-2 text-indigo-400">
-                                <span>></span>
-                                <span class="border-r-2 border-indigo-400 animate-pulse w-1 h-4 inline-block"></span>
-                            </div>
+                    </div>
+
+                    <!-- Terminal Footer Status Bar -->
+                    <div class="px-5 py-2.5 bg-white/5 border-t border-white/5 flex items-center justify-between text-xs font-mono text-slate-400">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span>ADK Orchestration: Active</span>
                         </div>
+                        <span class="text-slate-500">TypeScript • Python • MCP</span>
                     </div>
                 </div>
             </div>
@@ -238,151 +294,270 @@
         </div>
     </header>
 
-    <!-- Experience Section (Moved up for recruiter visibility) -->
-    <section id="experience" class="pt-24 pb-12 relative z-10">
+    <!-- ==========================================================================
+         INTERACTIVE MULTI-AGENT PIPELINE SIMULATOR (SHOWCASE SECTION)
+         ========================================================================== -->
+    <section id="simulator" class="py-20 relative z-10 border-y border-slate-200 dark:border-white/10 bg-slate-100/60 dark:bg-slate-950/40">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-16 text-center animate-on-scroll">
-                <h2 class="font-display font-bold text-4xl text-slate-900 mb-4">Experience</h2>
-                <p class="text-slate-600 max-w-2xl mx-auto">From training ground to production-grade AI systems and full-stack applications.</p>
+            <div class="mb-12 text-center animate-on-scroll">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-mono font-semibold mb-3 border border-indigo-500/20">
+                    <span>LIVE DEMONSTRATION</span>
+                </div>
+                <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-slate-900 dark:text-white mb-4">
+                    Interactive Multi-Agent Simulator
+                </h2>
+                <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-sm sm:text-base">
+                    Experience how my architected multi-agent platforms autonomously discover context, validate regulatory compliance, execute LLM-as-a-judge checks, and enforce Human-in-the-Loop approvals.
+                </p>
             </div>
 
-            <div class="w-full">
-                <div class="space-y-6">
-                    <!-- Accordion Item 1 (Expanded by default) -->
-                    <div class="accordion-item expanded animate-on-scroll">
-                        <div class="accordion-header">
-                            <div>
-                                <h3 class="text-xl md:text-2xl font-bold text-slate-900">Software Development Engineer (AI)</h3>
-                                <h4 class="text-indigo-600 font-semibold mt-1">HashedIn by Deloitte</h4>
+            <!-- Simulator Sandbox Window -->
+            <div class="glass-card rounded-2xl p-6 md:p-8 animate-on-scroll">
+                <!-- Scenario Switcher Bar -->
+                <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10">
+                    <div class="flex flex-wrap gap-2">
+                        <button class="sim-scenario-btn px-4 py-2 rounded-xl text-xs font-semibold bg-indigo-600 text-white transition-all shadow-sm" data-scenario="regulatory">
+                            1. Regulatory Intelligence (Google ADK)
+                        </button>
+                        <button class="sim-scenario-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-white/5 transition-all" data-scenario="vendor">
+                            2. Vendor & Expense Audit (BambooHR API)
+                        </button>
+                        <button class="sim-scenario-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-white/5 transition-all" data-scenario="swe">
+                            3. Autonomous SWE Platform (LangGraph)
+                        </button>
+                    </div>
+
+                    <button id="sim-run-btn" class="btn-primary px-5 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2 shadow-md">
+                        <svg class="w-4 h-4 text-cyan-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                        </svg>
+                        <span>Run Agent Workflow</span>
+                    </button>
+                </div>
+
+                <!-- 4 Agent Stages Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 my-6" id="sim-stages-container">
+                    <!-- Populated dynamically via main.js -->
+                </div>
+
+                <!-- Real-Time Agent Execution Log Window -->
+                <div class="mb-4">
+                    <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-2 px-1">
+                        <span>// Execution Telemetry & Reasoning Stream</span>
+                        <span class="text-indigo-400" id="sim-metrics-text">Turnaround reduced from 5 days → 6 hours (95% manual effort cut)</span>
+                    </div>
+                    <div class="sim-terminal-log" id="sim-log-output">
+                        <span class="text-slate-500">// Ready to execute multi-agent simulation...</span>
+                    </div>
+                </div>
+
+                <!-- Human-in-the-Loop Approval Modal Bar -->
+                <div id="sim-hitl-box" class="hidden p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <span class="w-3 h-3 rounded-full bg-amber-400 animate-ping"></span>
+                        <div>
+                            <p class="text-xs font-bold text-amber-300 uppercase tracking-wider">Human-in-the-Loop (HITL) Gate</p>
+                            <p class="text-xs text-slate-300" id="sim-hitl-prompt">Approval required before writing to production records.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button id="sim-hitl-approve" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-bold transition-colors">
+                            Approve & Commit
+                        </button>
+                        <button id="sim-hitl-reject" class="px-4 py-2 bg-rose-600/80 hover:bg-rose-600 text-white rounded-lg text-xs font-bold transition-colors">
+                            Reject / Regenerate
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         EXPERIENCE SECTION: HashedIn by Deloitte & Core Platforms
+         ========================================================================== -->
+    <section id="experience" class="py-20 relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="mb-14 text-center animate-on-scroll">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-mono font-semibold mb-3">
+                    <span>PRODUCTION IMPACT</span>
+                </div>
+                <h2 class="font-display font-extrabold text-4xl sm:text-5xl text-slate-900 dark:text-white mb-4">
+                    Work Experience
+                </h2>
+                <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-sm sm:text-base">
+                    Leading the architecture and implementation of enterprise Agentic AI platforms, multi-agent control planes, and full-stack solutions.
+                </p>
+            </div>
+
+            <!-- Role Card -->
+            <div class="space-y-6">
+                <!-- Deloitte Role Accordion (Expanded by Default) -->
+                <div class="accordion-item expanded animate-on-scroll">
+                    <div class="accordion-header">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-indigo-600/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-lg">
+                                HD
                             </div>
-                            <div class="flex items-center gap-4">
-                                <span class="hidden md:inline-block px-3 py-1 bg-indigo-50 border border-indigo-100 rounded-full text-xs font-semibold text-indigo-700">Sept 2024 - Present</span>
-                                <svg class="w-6 h-6 text-slate-400 chevron-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                </svg>
+                            <div>
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                                        Software Development Engineer – AI
+                                    </h3>
+                                    <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold">
+                                        Led Team of 5 Engineers
+                                    </span>
+                                </div>
+                                <h4 class="text-indigo-600 dark:text-indigo-400 font-semibold text-sm sm:text-base mt-1 flex items-center gap-2">
+                                    <span>HashedIn by Deloitte</span>
+                                    <span class="text-slate-500 dark:text-slate-400">•</span>
+                                    <span class="text-slate-500 dark:text-slate-400 text-xs">Bengaluru, India</span>
+                                </h4>
                             </div>
                         </div>
-                        <div class="accordion-content">
-                            <div class="px-8 pb-8 pt-2 border-t border-slate-100">
-                                <div class="grid md:grid-cols-12 gap-8 items-start">
-                                    <div class="md:col-span-8">
-                                        <div class="md:hidden mb-4">
-                                            <span class="inline-block px-3 py-1 bg-indigo-50 border border-indigo-100 rounded-full text-xs font-semibold text-indigo-700">Sept 2024 - Present</span>
-                                        </div>
-                                        <ul class="space-y-4 text-slate-600 text-sm leading-relaxed mb-6">
-                                            <li class="flex items-start gap-3">
-                                                <span class="text-indigo-500 mt-1">✦</span>
-                                                <div><strong class="text-slate-900 font-semibold">Agentic AI Platform:</strong> Designed and developed an Agentic AI platform using Google ADK to automate regulatory intelligence, compliance assessment, and risk analysis, reducing manual effort by 95%.</div>
-                                            </li>
-                                            <li class="flex items-start gap-3">
-                                                <span class="text-indigo-500 mt-1">✦</span>
-                                                <div><strong class="text-slate-900 font-semibold">Specialized AI Agents:</strong> Built specialized AI agents for regulatory discovery and compliance analysis, along with a dedicated QA Agent that validated AI-generated responses, improving accuracy and consistency.</div>
-                                            </li>
-                                            <li class="flex items-start gap-3">
-                                                <span class="text-indigo-500 mt-1">✦</span>
-                                                <div><strong class="text-slate-900 font-semibold">Vendor Management:</strong> Developed an Agentic Vendor Management platform that automated invoice reviews, expense submissions, BambooHR timesheets, approvals, and trip planning.</div>
-                                            </li>
-                                            <li class="flex items-start gap-3">
-                                                <span class="text-indigo-500 mt-1">✦</span>
-                                                <div><strong class="text-slate-900 font-semibold">Multi-Agent Framework:</strong> Architected a distributed multi-agent collaboration framework using Kafka as the communication layer and an Agent Registry.</div>
-                                            </li>
-                                            <li class="flex items-start gap-3">
-                                                <span class="text-indigo-500 mt-1">✦</span>
-                                                <div><strong class="text-slate-900 font-semibold">Scalable Services:</strong> Developed scalable backend services using Python, FastAPI, PostgreSQL, REST APIs, and GraphQL, and responsive frontend systems using React and Angular.</div>
-                                            </li>
-                                            <li class="flex items-start gap-3">
-                                                <span class="text-indigo-500 mt-1">✦</span>
-                                                <div><strong class="text-slate-900 font-semibold">Collaboration & Tooling:</strong> Collaborated with cross-functional teams, leveraging Copilot and Claude Code to accelerate delivery while ensuring quality via tests and reviews.</div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="md:col-span-4 space-y-6">
-                                        <div>
-                                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Location</p>
-                                            <p class="text-sm font-semibold text-slate-700 flex items-center gap-1.5">
-                                                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                </svg>
-                                                Bengaluru, India
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Technologies</p>
-                                            <div class="flex flex-wrap gap-1.5">
-                                                <span class="px-2.5 py-1 bg-slate-100 border border-slate-200 rounded-md text-xs font-mono text-slate-600">Google ADK</span>
-                                                <span class="px-2.5 py-1 bg-slate-100 border border-slate-200 rounded-md text-xs font-mono text-slate-600">LangGraph</span>
-                                                <span class="px-2.5 py-1 bg-slate-100 border border-slate-200 rounded-md text-xs font-mono text-slate-600">FastAPI</span>
-                                                <span class="px-2.5 py-1 bg-slate-100 border border-slate-200 rounded-md text-xs font-mono text-slate-600">React</span>
-                                                <span class="px-2.5 py-1 bg-slate-100 border border-slate-200 rounded-md text-xs font-mono text-slate-600">Angular</span>
-                                                <span class="px-2.5 py-1 bg-slate-100 border border-slate-200 rounded-md text-xs font-mono text-slate-600">Kafka</span>
-                                                <span class="px-2.5 py-1 bg-slate-100 border border-slate-200 rounded-md text-xs font-mono text-slate-600">PostgreSQL</span>
-                                                <span class="px-2.5 py-1 bg-slate-100 border border-slate-200 rounded-md text-xs font-mono text-slate-600">GraphQL</span>
-                                                <span class="px-2.5 py-1 bg-slate-100 border border-slate-200 rounded-md text-xs font-mono text-slate-600">Python</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
+                        <div class="flex items-center gap-4">
+                            <span class="hidden md:inline-block px-3.5 py-1 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-xs font-semibold text-indigo-300">
+                                Jun 2024 – Present (2.5+ Yrs Industry Exp)
+                            </span>
+                            <svg class="w-6 h-6 text-slate-400 chevron-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
                         </div>
                     </div>
 
-                    <!-- Accordion Item 2 (Collapsed by default) -->
-                    <div class="accordion-item animate-on-scroll">
-                        <div class="accordion-header">
-                            <div>
-                                <h3 class="text-xl md:text-2xl font-bold text-slate-900">Trainee Software Engineer</h3>
-                                <h4 class="text-indigo-600 font-semibold mt-1">HashedIn by Deloitte</h4>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <span class="hidden md:inline-block px-3 py-1 bg-indigo-50 border border-indigo-100 rounded-full text-xs font-semibold text-indigo-700">June 2024 - Sept 2024</span>
-                                <svg class="w-6 h-6 text-slate-400 chevron-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="accordion-content">
-                            <div class="px-8 pb-8 pt-2 border-t border-slate-100">
-                                <div class="grid md:grid-cols-12 gap-8 items-start">
-                                    <div class="md:col-span-8">
-                                        <div class="md:hidden mb-4">
-                                            <span class="inline-block px-3 py-1 bg-indigo-50 border border-indigo-100 rounded-full text-xs font-semibold text-indigo-700">June 2024 - Sept 2024</span>
-                                        </div>
-                                        <ul class="space-y-4 text-slate-600 text-sm leading-relaxed mb-6">
-                                            <li class="flex items-start gap-3">
-                                                <span class="text-indigo-500 mt-1">✦</span>
-                                                <div><strong class="text-slate-900 font-semibold">Enterprise Applications:</strong> Developed enterprise applications using Java and Angular, contributing to feature implementation, debugging, unit testing, and production support in Agile teams.</div>
-                                            </li>
-                                            <li class="flex items-start gap-3">
-                                                <span class="text-indigo-500 mt-1">✦</span>
-                                                <div><strong class="text-slate-900 font-semibold">UI & Cloud Integration:</strong> Built reusable UI components and integrated backend APIs while supporting cloud-native GenAI application development on GCP.</div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="md:col-span-4 space-y-6">
-                                        <div>
-                                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Location</p>
-                                            <p class="text-sm font-semibold text-slate-700 flex items-center gap-1.5">
-                                                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                </svg>
-                                                Bengaluru, India
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Technologies</p>
-                                            <div class="flex flex-wrap gap-1.5">
-                                                <span class="px-2.5 py-1 bg-slate-100 border border-slate-200 rounded-md text-xs font-mono text-slate-600">Java</span>
-                                                <span class="px-2.5 py-1 bg-slate-100 border border-slate-200 rounded-md text-xs font-mono text-slate-600">Angular</span>
-                                                <span class="px-2.5 py-1 bg-slate-100 border border-slate-200 rounded-md text-xs font-mono text-slate-600">GCP</span>
-                                                <span class="px-2.5 py-1 bg-slate-100 border border-slate-200 rounded-md text-xs font-mono text-slate-600">REST APIs</span>
-                                                <span class="px-2.5 py-1 bg-slate-100 border border-slate-200 rounded-md text-xs font-mono text-slate-600">Agile</span>
-                                            </div>
-                                        </div>
+                    <div class="accordion-content">
+                        <div class="px-6 md:px-8 pb-8 pt-2 border-t border-white/5 space-y-8">
+
+                            <!-- Pillar 1: Regulatory Intelligence Platform -->
+                            <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-indigo-500/30 transition-all">
+                                <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                    <h5 class="font-display font-bold text-lg text-slate-900 dark:text-white flex items-center gap-2">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
+                                        Regulatory Intelligence Platform
+                                    </h5>
+                                    <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+                                        <span class="px-2.5 py-0.5 bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 rounded-md">Google ADK</span>
+                                        <span class="px-2.5 py-0.5 bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 rounded-md">Python</span>
+                                        <span class="px-2.5 py-0.5 bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 rounded-md">FastAPI</span>
+                                        <span class="px-2.5 py-0.5 bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 rounded-md">React</span>
+                                        <span class="px-2.5 py-0.5 bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 rounded-md">PostgreSQL</span>
                                     </div>
                                 </div>
+                                <ul class="space-y-2.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                                    <li class="flex items-start gap-2.5">
+                                        <span class="text-indigo-400 mt-1 font-bold">↳</span>
+                                        <div><strong>End-to-End Regulatory Automation:</strong> Architected a multi-agent platform on <strong>Google ADK</strong> that automates the full regulatory intelligence cycle—discovering new regulations, assessing compliance gaps, scoring risk, and estimating business impact across <strong>40+ regulatory sources</strong>, cutting analysts' manual effort by <strong>95% (from days → hours per assessment)</strong>.</div>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <span class="text-indigo-400 mt-1 font-bold">↳</span>
+                                        <div><strong>Specialized Agents & RAG Grounding:</strong> Split workflow into specialized agents (<em>Discovery, Compliance Analysis, Risk Scoring, Impact Evaluation</em>) coordinated by a central orchestrator. Each agent features narrow system prompts, custom tools, and structured JSON schemas, grounded with RAG so every finding directly cites its source clause.</div>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <span class="text-indigo-400 mt-1 font-bold">↳</span>
+                                        <div><strong>LLM-as-a-Judge QA Agent:</strong> Built a dedicated QA agent that evaluates generated findings against cited legal text and sends unsupported claims back for regeneration before analysts inspect them, lifting answer accuracy from <strong>78% to 94%</strong> on a 300-case evaluation set.</div>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <span class="text-indigo-400 mt-1 font-bold">↳</span>
+                                        <div><strong>Team Leadership & Rollout:</strong> Led a team of <strong>5 engineers</strong> through design, build, and rollout—breaking down work, conducting rigorous code reviews, and owning the agent architecture—replacing a manual workflow and reducing turnaround from <strong>5 days to 6 hours</strong>.</div>
+                                    </li>
+                                </ul>
                             </div>
+
+                            <!-- Pillar 2: Agentic Vendor Management Platform -->
+                            <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all">
+                                <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                    <h5 class="font-display font-bold text-lg text-slate-900 dark:text-white flex items-center gap-2">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+                                        Agentic Vendor Management Platform
+                                    </h5>
+                                    <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+                                        <span class="px-2.5 py-0.5 bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 rounded-md">Autonomous Agents</span>
+                                        <span class="px-2.5 py-0.5 bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 rounded-md">BambooHR API</span>
+                                        <span class="px-2.5 py-0.5 bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 rounded-md">FastAPI</span>
+                                        <span class="px-2.5 py-0.5 bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 rounded-md">Angular</span>
+                                    </div>
+                                </div>
+                                <ul class="space-y-2.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                                    <li class="flex items-start gap-2.5">
+                                        <span class="text-cyan-400 mt-1 font-bold">↳</span>
+                                        <div><strong>Back-Office Automation:</strong> Built a suite of AI agents running vendor and employee-expense operations end-to-end: invoice review, expense submission, approvals, <strong>BambooHR timesheets</strong>, trip planning, and reimbursements.</div>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <span class="text-cyan-400 mt-1 font-bold">↳</span>
+                                        <div><strong>Policy Enforcement & API Integration:</strong> Invoice agent audits vendor line items against agreed master service agreements and flags discrepancies; expense agents validate receipts against policies; BambooHR API integration submits timesheets autonomously.</div>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <span class="text-cyan-400 mt-1 font-bold">↳</span>
+                                        <div><strong>Human-in-the-Loop Governance:</strong> Integrated HITL approval gates on every critical operation moving money or modifying records, providing an approval dashboard where managers inspect the agent's chain-of-thought reasoning before approving.</div>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <span class="text-cyan-400 mt-1 font-bold">↳</span>
+                                        <div><strong>Scale:</strong> Currently processes <strong>2,000+ requests/month</strong> and cut operational processing time by <strong>70%</strong>.</div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Pillar 3: Distributed Multi-Agent Control Plane -->
+                            <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-purple-500/30 transition-all">
+                                <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                    <h5 class="font-display font-bold text-lg text-slate-900 dark:text-white flex items-center gap-2">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-purple-400"></span>
+                                        Distributed Multi-Agent Control Plane
+                                    </h5>
+                                    <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+                                        <span class="px-2.5 py-0.5 bg-purple-500/10 text-purple-300 border border-purple-500/20 rounded-md">AWS Bedrock</span>
+                                        <span class="px-2.5 py-0.5 bg-purple-500/10 text-purple-300 border border-purple-500/20 rounded-md">DynamoDB</span>
+                                        <span class="px-2.5 py-0.5 bg-purple-500/10 text-purple-300 border border-purple-500/20 rounded-md">Kafka</span>
+                                        <span class="px-2.5 py-0.5 bg-purple-500/10 text-purple-300 border border-purple-500/20 rounded-md">MCP</span>
+                                        <span class="px-2.5 py-0.5 bg-purple-500/10 text-purple-300 border border-purple-500/20 rounded-md">A2A</span>
+                                    </div>
+                                </div>
+                                <ul class="space-y-2.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                                    <li class="flex items-start gap-2.5">
+                                        <span class="text-purple-400 mt-1 font-bold">↳</span>
+                                        <div><strong>Cross-Team Agent Coordination:</strong> Designed shared infrastructure enabling agents across different teams to discover and invoke each other: an <strong>Agent-to-Agent (A2A)</strong> service-discovery layer and a <strong>Model Context Protocol (MCP)</strong> tool registry stored in AWS DynamoDB.</div>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <span class="text-purple-400 mt-1 font-bold">↳</span>
+                                        <div><strong>Event-Driven Kafka Architecture:</strong> Routed domain events through Kafka to invoke AWS Bedrock agent runtimes asynchronously, eliminating service timeouts on long-running multi-step agent workflows.</div>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <span class="text-purple-400 mt-1 font-bold">↳</span>
+                                        <div><strong>Fault Tolerance:</strong> Implemented exponential retry backoff, circuit breaking, and dead-letter queues, cutting agent task failure rates by <strong>30%</strong>.</div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Pillar 4: Full-Stack Engineering & Delivery -->
+                            <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-emerald-500/30 transition-all">
+                                <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                    <h5 class="font-display font-bold text-lg text-slate-900 dark:text-white flex items-center gap-2">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                                        Full-Stack Engineering & Streaming Delivery
+                                    </h5>
+                                    <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+                                        <span class="px-2.5 py-0.5 bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 rounded-md">React</span>
+                                        <span class="px-2.5 py-0.5 bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 rounded-md">Angular</span>
+                                        <span class="px-2.5 py-0.5 bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 rounded-md">FastAPI</span>
+                                        <span class="px-2.5 py-0.5 bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 rounded-md">GraphQL</span>
+                                        <span class="px-2.5 py-0.5 bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 rounded-md">REST</span>
+                                    </div>
+                                </div>
+                                <ul class="space-y-2.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                                    <li class="flex items-start gap-2.5">
+                                        <span class="text-emerald-400 mt-1 font-bold">↳</span>
+                                        <div>Built high-performance <strong>FastAPI</strong> backends (REST and GraphQL on PostgreSQL) and intuitive <strong>React/Angular</strong> frontends featuring streamed token responses (SSE), citation inspection modals, and HITL approval screens.</div>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <span class="text-emerald-400 mt-1 font-bold">↳</span>
+                                        <div>Leveraged <strong>Claude Code</strong> and <strong>GitHub Copilot</strong> to accelerate delivery cycles while enforcing test-driven code quality, comprehensive unit test suites, and strict peer code reviews.</div>
+                                    </li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -390,317 +565,474 @@
         </div>
     </section>
 
-      <!-- Projects Section -->
-    <section id="projects" class="pt-12 pb-12 relative z-10 bg-slate-50 border-y border-slate-200/60">
+    <!-- ==========================================================================
+         FEATURED PROJECTS SECTION
+         ========================================================================== -->
+    <section id="projects" class="py-20 relative z-10 border-t border-slate-200 dark:border-white/10 bg-slate-100/50 dark:bg-slate-950/30">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-16 md:flex justify-between items-end animate-on-scroll">
-                <div>
-                    <h2 class="font-display font-bold text-4xl text-slate-900 mb-4">Selected Work</h2>
-                    <p class="text-slate-600 max-w-xl">Deep dive into systems I've architected, focusing on Agentic AI
-                        and Full-Stack scalable solutions.</p>
+            <div class="mb-14 text-center animate-on-scroll">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-mono font-semibold mb-3">
+                    <span>PORTFOLIO CODEBASES</span>
                 </div>
+                <h2 class="font-display font-extrabold text-4xl sm:text-5xl text-slate-900 dark:text-white mb-4">
+                    Featured Systems & Projects
+                </h2>
+                <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-sm sm:text-base">
+                    Selected autonomous engineering platforms demonstrating multi-agent workflows, code synthesis in Docker sandboxes, and vector retrieval.
+                </p>
             </div>
 
             <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
-                <!-- Project 1 -->
-                <div class="glass-card rounded-[2rem] p-8 flex flex-col h-full animate-on-scroll">
-                    <div
-                        class="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center mb-6 text-white shadow-lg shadow-indigo-500/20">
-                        <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                        </svg>
+                <!-- Project 1: Multi-Agent Software Engineering Platform -->
+                <div class="glass-card rounded-2xl p-7 flex flex-col justify-between animate-on-scroll">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                </svg>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">
+                                60% Faster PRs
+                            </span>
+                        </div>
+
+                        <span class="text-xs font-bold text-indigo-400 tracking-wider uppercase font-mono">Agentic SWE</span>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1 mb-3">
+                            Multi-Agent Software Engineering Platform
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                            Autonomous planner, developer, reviewer, and tester agents orchestrated in <strong>LangGraph</strong> that ingest GitHub issues, execute code changes in an isolated Docker sandbox, validate against test suites, and open pull requests with human approval.
+                        </p>
+
+                        <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 mb-6 text-xs text-slate-400">
+                            <span class="text-indigo-400 font-semibold font-mono">Benchmark:</span> Resolved 32 of 50 test repository issues end-to-end and reduced issue-to-PR cycle by 60%.
+                        </div>
                     </div>
-                    <div class="mb-4">
-                        <span class="text-xs font-bold text-indigo-600 tracking-wider uppercase">Agentic AI</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Multi-Agent SWE Platform</h3>
-                    <p class="text-slate-600 text-sm mb-6 flex-grow">
-                        Built autonomous planner, developer, reviewer, and testing agents that collaboratively analyzed repositories, generated code changes, executed tests, and created pull requests with human approval, reducing development effort by 60%.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-mono text-slate-600">Python</span>
-                        <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-mono text-slate-600">LangGraph</span>
-                        <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-mono text-slate-600">FastAPI</span>
-                        <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-mono text-slate-600">React</span>
-                        <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-mono text-slate-600">PostgreSQL</span>
-                        <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-mono text-slate-600">pgvector</span>
-                        <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-mono text-slate-600">Docker</span>
+
+                    <div>
+                        <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+                            <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs font-mono text-slate-300">LangGraph</span>
+                            <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs font-mono text-slate-300">pgvector</span>
+                            <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs font-mono text-slate-300">Docker</span>
+                            <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs font-mono text-slate-300">Python</span>
+                            <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs font-mono text-slate-300">GitHub API</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="glass-card rounded-[2rem] p-8 flex flex-col h-full animate-on-scroll"
-                    style="animation-delay: 0.1s;">
-                    <div
-                        class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-6 text-white shadow-lg shadow-purple-500/20">
-                        <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                        </svg>
+                <!-- Project 2: AI Codebase Analysis Platform -->
+                <div class="glass-card rounded-2xl p-7 flex flex-col justify-between animate-on-scroll" style="animation-delay: 0.1s;">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">
+                                40% Onboarding Cut
+                            </span>
+                        </div>
+
+                        <span class="text-xs font-bold text-cyan-400 tracking-wider uppercase font-mono">Semantic Analysis</span>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1 mb-3">
+                            AI Codebase Analysis Platform
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                            Deep codebase indexing engine that generates semantic embeddings for GitHub repositories, uses agents to map architecture diagrams, auto-generates documentation, and answers natural language queries with file-level citations.
+                        </p>
+
+                        <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 mb-6 text-xs text-slate-400">
+                            <span class="text-cyan-400 font-semibold font-mono">Scale:</span> Cut manual code-review and onboarding time by 40% across 15 repositories (500k+ lines of code).
+                        </div>
                     </div>
-                    <div class="mb-4">
-                        <span class="text-xs font-bold text-purple-600 tracking-wider uppercase">MLOps & Observability</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-3">AI Agent Observability</h3>
-                    <p class="text-slate-600 text-sm mb-6 flex-grow">
-                        Developed a full-stack observability platform for monitoring multi-agent workflows with real-time execution tracing, prompt versioning, token usage, workflow replay, and agent evaluation to simplify debugging of production AI systems.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-mono text-slate-600">Python</span>
-                        <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-mono text-slate-600">FastAPI</span>
-                        <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-mono text-slate-600">React</span>
-                        <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-mono text-slate-600">LangGraph</span>
-                        <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-mono text-slate-600">Kafka</span>
-                        <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-mono text-slate-600">PostgreSQL</span>
-                        <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-mono text-slate-600">WebSockets</span>
+
+                    <div>
+                        <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+                            <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs font-mono text-slate-300">LangChain</span>
+                            <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs font-mono text-slate-300">FastAPI</span>
+                            <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs font-mono text-slate-300">React</span>
+                            <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs font-mono text-slate-300">Vector Embeddings</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="glass-card rounded-[2rem] p-8 flex flex-col h-full animate-on-scroll"
-                    style="animation-delay: 0.2s;">
-                    <div
-                        class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center mb-6 text-white shadow-lg shadow-emerald-500/20">
-                        <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
+                <!-- Project 3: Distributed Multi-Agent Control Plane & MCP Registry -->
+                <div class="glass-card rounded-2xl p-7 flex flex-col justify-between animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                </svg>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-purple-500/10 text-purple-300 border border-purple-500/20">
+                                -30% Task Failures
+                            </span>
+                        </div>
+
+                        <span class="text-xs font-bold text-purple-400 tracking-wider uppercase font-mono">Distributed Systems</span>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1 mb-3">
+                            Distributed Multi-Agent Control Plane
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                            Scalable inter-agent infrastructure featuring an Agent-to-Agent (A2A) discovery layer, an MCP tool registry in DynamoDB, and asynchronous event routing via Kafka to execute AWS Bedrock runtimes without timeouts.
+                        </p>
+
+                        <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 mb-6 text-xs text-slate-400">
+                            <span class="text-purple-400 font-semibold font-mono">Resiliency:</span> Built retries and failure handling around agent invocations, cutting failure rates by 30%.
+                        </div>
                     </div>
-                    <div class="mb-4">
-                        <span class="text-xs font-bold text-emerald-600 tracking-wider uppercase">Full-Stack AI</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Codebase Analysis Portal</h3>
-                    <p class="text-slate-600 text-sm mb-6 flex-grow">
-                        Full-stack portal that ingests repositories and auto-generates architecture reports through a multi-agent workflow, cutting manual code review time by 40%.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-mono text-slate-600">React</span>
-                        <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-mono text-slate-600">TypeScript</span>
-                        <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-mono text-slate-600">FastAPI</span>
-                        <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs font-mono text-slate-600">Python</span>
+
+                    <div>
+                        <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+                            <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs font-mono text-slate-300">AWS Bedrock</span>
+                            <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs font-mono text-slate-300">DynamoDB</span>
+                            <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs font-mono text-slate-300">Kafka</span>
+                            <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs font-mono text-slate-300">MCP</span>
+                            <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs font-mono text-slate-300">A2A</span>
+                        </div>
                     </div>
                 </div>
-            </div>                
+            </div>
         </div>
     </section>
-      <!-- Skills Section -->
-    <section id="skills" class="pt-12 pb-16 relative z-10 bg-white border-b border-slate-200/60">
+
+    <!-- ==========================================================================
+         TECHNICAL SKILLS SECTION: Modern AI Taxonomy & Category Filter
+         ========================================================================== -->
+    <section id="skills" class="py-20 relative z-10">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-16 text-center animate-on-scroll">
-                <h2 class="font-display font-bold text-4xl text-slate-900 mb-4">Technical Expertise</h2>
-                <p class="text-slate-600 max-w-2xl mx-auto">Specialized in Agentic AI architectures, scalable distributed systems, and modern frontend frameworks.</p>
+            <div class="mb-12 text-center animate-on-scroll">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-mono font-semibold mb-3">
+                    <span>TECHNICAL COMPETENCY</span>
+                </div>
+                <h2 class="font-display font-extrabold text-4xl sm:text-5xl text-slate-900 dark:text-white mb-4">
+                    Technical Skills
+                </h2>
+                <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-sm sm:text-base">
+                    Core technical stack analyzed from my production systems and continuous industry standard delivery.
+                </p>
+
+                <!-- Filter Chips -->
+                <div class="flex flex-wrap justify-center gap-2 mt-8">
+                    <button class="skill-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-indigo-600 text-white transition-all active" data-filter="all">
+                        All Disciplines
+                    </button>
+                    <button class="skill-filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-white/5 transition-all" data-filter="genai">
+                        GenAI & Agents
+                    </button>
+                    <button class="skill-filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-white/5 transition-all" data-filter="platforms">
+                        LLMs & Platforms
+                    </button>
+                    <button class="skill-filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-white/5 transition-all" data-filter="backend">
+                        Backend & Distributed
+                    </button>
+                    <button class="skill-filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-white/5 transition-all" data-filter="frontend">
+                        Frontend & UI
+                    </button>
+                    <button class="skill-filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-white/5 transition-all" data-filter="cloud">
+                        Cloud & Tools
+                    </button>
+                </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 mx-auto">
-                <!-- Category: Agentic AI -->
-                <div class="glass-card p-6 rounded-3xl border-t-2 border-t-indigo-500 group animate-on-scroll">
+            <!-- Skills Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="skills-cards-container">
+
+                <!-- Card 1: GenAI & Agents -->
+                <div class="glass-card p-6 rounded-2xl border-t-2 border-t-indigo-500 skill-category-card animate-on-scroll" data-category="genai">
                     <div class="flex items-center gap-3 mb-5">
-                        <div class="p-2.5 bg-indigo-50 rounded-xl text-indigo-600 group-hover:scale-105 transition-all">
+                        <div class="p-2.5 rounded-xl bg-indigo-500/10 text-indigo-400">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold text-slate-900 dark:text-white">GenAI & Agents</h4>
+                            <p class="text-[11px] text-slate-400 font-mono">Cognitive Architecture & Orchestration</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Google ADK</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">LangGraph</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">LangChain</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Model Context Protocol (MCP)</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Agent-to-Agent (A2A)</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Multi-Agent Orchestration</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">RAG Architectures</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Prompt Engineering</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">LLM Evaluation (LLM-as-Judge)</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Human-in-the-Loop (HITL)</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">ADLC</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: LLM Platforms & Vector Systems -->
+                <div class="glass-card p-6 rounded-2xl border-t-2 border-t-cyan-500 skill-category-card animate-on-scroll" data-category="platforms">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="p-2.5 rounded-xl bg-cyan-500/10 text-cyan-400">
                             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                             </svg>
                         </div>
                         <div>
-                            <h4 class="text-lg font-bold text-slate-900">Agentic AI</h4>
-                            <p class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold">Cognitive Architecture & Orchestration</p>
+                            <h4 class="text-base font-bold text-slate-900 dark:text-white">LLM Platforms & Vectors</h4>
+                            <p class="text-[11px] text-slate-400 font-mono">Foundation Models & Embeddings</p>
                         </div>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="tag-skill tag-ai px-3 py-1.5 rounded-full text-xs font-semibold">LangChain</span>
-                        <span class="tag-skill tag-ai px-3 py-1.5 rounded-full text-xs font-semibold">LangGraph</span>
-                        <span class="tag-skill tag-ai px-3 py-1.5 rounded-full text-xs font-semibold">Google ADK</span>
-                        <span class="tag-skill tag-ai px-3 py-1.5 rounded-full text-xs font-semibold">Multi-Agent Development</span>
-                        <span class="tag-skill tag-ai px-3 py-1.5 rounded-full text-xs font-semibold">LLM Integration</span>
-                        <span class="tag-skill tag-ai px-3 py-1.5 rounded-full text-xs font-semibold">Prompt Engineering</span>
-                        <span class="tag-skill tag-ai px-3 py-1.5 rounded-full text-xs font-semibold">RAG</span>
-                        <span class="tag-skill tag-ai px-3 py-1.5 rounded-full text-xs font-semibold">Model Evaluation</span>
-                        <span class="tag-skill tag-ai px-3 py-1.5 rounded-full text-xs font-semibold">Human-in-the-Loop (HITL)</span>
-                        <span class="tag-skill tag-ai px-3 py-1.5 rounded-full text-xs font-semibold">ADLC</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">AWS Bedrock</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">GCP Vertex AI</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Claude (Anthropic)</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Gemini (Google)</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">pgvector</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Vector Indexing</span>
                     </div>
                 </div>
 
-                <!-- Category: Languages & UI -->
-                <div class="glass-card p-6 rounded-3xl border-t-2 border-t-sky-500 group animate-on-scroll">
+                <!-- Card 3: Backend & Distributed Systems -->
+                <div class="glass-card p-6 rounded-2xl border-t-2 border-t-purple-500 skill-category-card animate-on-scroll" data-category="backend">
                     <div class="flex items-center gap-3 mb-5">
-                        <div class="p-2.5 bg-sky-50 rounded-xl text-sky-600 group-hover:scale-105 transition-all">
-                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-900">Languages & UI</h4>
-                            <p class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold">Core Coding & Interfaces</p>
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tag-skill tag-lang px-3 py-1.5 rounded-full text-xs font-semibold">Python</span>
-                        <span class="tag-skill tag-lang px-3 py-1.5 rounded-full text-xs font-semibold">JavaScript</span>
-                        <span class="tag-skill tag-lang px-3 py-1.5 rounded-full text-xs font-semibold">TypeScript</span>
-                        <span class="tag-skill tag-lang px-3 py-1.5 rounded-full text-xs font-semibold">SQL</span>
-                        <span class="tag-skill tag-lang px-3 py-1.5 rounded-full text-xs font-semibold">NoSQL</span>
-                        <span class="tag-skill tag-lang px-3 py-1.5 rounded-full text-xs font-semibold">React</span>
-                        <span class="tag-skill tag-lang px-3 py-1.5 rounded-full text-xs font-semibold">Angular</span>
-                    </div>
-                </div>
-
-                <!-- Category: Backend & Systems -->
-                <div class="glass-card p-6 rounded-3xl border-t-2 border-t-purple-500 group animate-on-scroll">
-                    <div class="flex items-center gap-3 mb-5">
-                        <div class="p-2.5 bg-purple-50 rounded-xl text-purple-600 group-hover:scale-105 transition-all">
+                        <div class="p-2.5 rounded-xl bg-purple-500/10 text-purple-400">
                             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
                             </svg>
                         </div>
                         <div>
-                            <h4 class="text-lg font-bold text-slate-900">Backend & Systems</h4>
-                            <p class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold">Scalable Architectures</p>
+                            <h4 class="text-base font-bold text-slate-900 dark:text-white">Backend & Distributed</h4>
+                            <p class="text-[11px] text-slate-400 font-mono">Scalable Services & Queues</p>
                         </div>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="tag-skill tag-back px-3 py-1.5 rounded-full text-xs font-semibold">FastAPI</span>
-                        <span class="tag-skill tag-back px-3 py-1.5 rounded-full text-xs font-semibold">REST APIs</span>
-                        <span class="tag-skill tag-back px-3 py-1.5 rounded-full text-xs font-semibold">GraphQL</span>
-                        <span class="tag-skill tag-back px-3 py-1.5 rounded-full text-xs font-semibold">PostgreSQL</span>
-                        <span class="tag-skill tag-back px-3 py-1.5 rounded-full text-xs font-semibold">Distributed Systems</span>
-                        <span class="tag-skill tag-back px-3 py-1.5 rounded-full text-xs font-semibold">Kafka</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Python</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">FastAPI</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">REST APIs</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">GraphQL</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">PostgreSQL</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">DynamoDB</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Apache Kafka</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Microservices</span>
                     </div>
                 </div>
 
-                <!-- Category: Cloud & SDLC Engineering -->
-                <div class="glass-card p-6 rounded-3xl border-t-2 border-t-emerald-500 group animate-on-scroll">
+                <!-- Card 4: Frontend & Streaming UI -->
+                <div class="glass-card p-6 rounded-2xl border-t-2 border-t-sky-500 skill-category-card animate-on-scroll" data-category="frontend">
                     <div class="flex items-center gap-3 mb-5">
-                        <div class="p-2.5 bg-emerald-50 rounded-xl text-emerald-600 group-hover:scale-105 transition-all">
+                        <div class="p-2.5 rounded-xl bg-sky-500/10 text-sky-400">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold text-slate-900 dark:text-white">Frontend & Streaming</h4>
+                            <p class="text-[11px] text-slate-400 font-mono">Modern UI & Real-Time Views</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">React</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Angular</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">TypeScript</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">JavaScript</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Streamed Responses (SSE)</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Citation & Approval UIs</span>
+                    </div>
+                </div>
+
+                <!-- Card 5: Cloud & DevOps Tools -->
+                <div class="glass-card p-6 rounded-2xl border-t-2 border-t-emerald-500 skill-category-card animate-on-scroll" data-category="cloud">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400">
                             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                             </svg>
                         </div>
                         <div>
-                            <h4 class="text-lg font-bold text-slate-900">Cloud & SDLC Engineering</h4>
-                            <p class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold">DevOps, MLOps, & System Operations</p>
+                            <h4 class="text-base font-bold text-slate-900 dark:text-white">Cloud & DevOps</h4>
+                            <p class="text-[11px] text-slate-400 font-mono">Infrastructure & Modern AI Tooling</p>
                         </div>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="tag-skill tag-cloud px-3 py-1.5 rounded-full text-xs font-semibold">Docker</span>
-                        <span class="tag-skill tag-cloud px-3 py-1.5 rounded-full text-xs font-semibold">Git</span>
-                        <span class="tag-skill tag-cloud px-3 py-1.5 rounded-full text-xs font-semibold">GitHub Copilot</span>
-                        <span class="tag-skill tag-cloud px-3 py-1.5 rounded-full text-xs font-semibold">Claude Code</span>
-                        <span class="tag-skill tag-cloud px-3 py-1.5 rounded-full text-xs font-semibold">GCP</span>
-                        <span class="tag-skill tag-cloud px-3 py-1.5 rounded-full text-xs font-semibold">AWS</span>
-                        <span class="tag-skill tag-cloud px-3 py-1.5 rounded-full text-xs font-semibold">CI/CD</span>
-                        <span class="tag-skill tag-cloud px-3 py-1.5 rounded-full text-xs font-semibold">Workflow Automation</span>
-                        <span class="tag-skill tag-cloud px-3 py-1.5 rounded-full text-xs font-semibold">System Design</span>
-                        <span class="tag-skill tag-cloud px-3 py-1.5 rounded-full text-xs font-semibold">Unit Testing</span>
-                        <span class="tag-skill tag-cloud px-3 py-1.5 rounded-full text-xs font-semibold">Debugging</span>
-                        <span class="tag-skill tag-cloud px-3 py-1.5 rounded-full text-xs font-semibold">Code Reviews</span>
-                        <span class="tag-skill tag-cloud px-3 py-1.5 rounded-full text-xs font-semibold">Agile / Scrum</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">AWS (Lambda, Bedrock, DynamoDB)</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Google Cloud (GCP)</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Docker</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">CI/CD Pipelines</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Git</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Claude Code</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">GitHub Copilot</span>
                     </div>
                 </div>
+
+                <!-- Card 6: Software Engineering Practices -->
+                <div class="glass-card p-6 rounded-2xl border-t-2 border-t-amber-500 skill-category-card animate-on-scroll" data-category="all">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="p-2.5 rounded-xl bg-amber-500/10 text-amber-400">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold text-slate-900 dark:text-white">Engineering Quality</h4>
+                            <p class="text-[11px] text-slate-400 font-mono">Testing, Design & Team Leadership</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Team Leadership (5 Eng)</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">System Architecture</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Unit & Integration Testing</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Rigorous Code Reviews</span>
+                        <span class="tag-skill px-3 py-1.5 rounded-lg text-xs font-medium">Agile Delivery</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Certifications & Education Section -->
-    <section id="certifications" class="py-16 relative z-10 bg-slate-50 border-b border-slate-200/60">
+    <!-- ==========================================================================
+         CERTIFICATIONS, AWARDS & EDUCATION SECTION
+         ========================================================================== -->
+    <section id="certifications" class="py-20 relative z-10 border-t border-slate-200 dark:border-white/10 bg-slate-100/60 dark:bg-slate-950/40">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-12 gap-12 items-start">
-                
-                <!-- Certifications Column -->
-                <div class="lg:col-span-7 animate-on-scroll">
-                    <h2 class="font-display font-bold text-4xl text-slate-900 mb-8">Certifications</h2>
 
-                    <div class="space-y-4 text-sm">
-                        <a href="https://shorturl.at/29QBc" target="_blank"
-                            class="block p-4 rounded-2xl bg-white border border-slate-200/85 hover:border-indigo-500/50 hover:-translate-y-0.5 shadow-sm transition-all group/cert">
+                <!-- Certifications & Honors Column (7 Cols) -->
+                <div class="lg:col-span-7 animate-on-scroll">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-mono font-semibold mb-3">
+                        <span>VERIFIED RECOGNITION</span>
+                    </div>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 dark:text-white mb-6">
+                        Certifications & Awards
+                    </h2>
+
+                    <div class="space-y-3.5">
+                        <!-- Cert 1: Claude Certified Architect (Anthropic) -->
+                        <a href="https://www.credly.com/badges/76750356-805f-45d0-91e2-fb5ea6df6570/public_url"
+                            target="_blank" rel="noopener noreferrer"
+                            class="glass-card block p-4 rounded-xl border border-white/10 hover:border-indigo-500/40 transition-all group">
                             <div class="flex justify-between items-center">
-                                <div>
-                                    <h5
-                                        class="text-slate-900 font-semibold group-hover/cert:text-indigo-600 transition-colors">
-                                        Professional Cloud Architect</h5>
-                                    <p class="text-slate-500 mt-1">Google Cloud</p>
+                                <div class="flex items-center gap-3.5">
+                                    <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 font-bold text-sm">
+                                        ✦
+                                    </div>
+                                    <div>
+                                        <h5 class="text-slate-900 dark:text-white font-bold text-sm group-hover:text-indigo-400 transition-colors">
+                                            Claude Certified Architect – Foundations
+                                        </h5>
+                                        <p class="text-slate-400 text-xs mt-0.5">Anthropic • Credly Verified Credential</p>
+                                    </div>
                                 </div>
-                                <svg class="w-6 h-6 text-slate-400 group-hover/cert:text-indigo-600 group-hover/cert:translate-x-0.5 transition-all"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                <svg class="w-5 h-5 text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                 </svg>
                             </div>
                         </a>
-                        <a href="https://shorturl.at/2OJi9" target="_blank"
-                            class="block p-4 rounded-2xl bg-white border border-slate-200/85 hover:border-indigo-500/50 hover:-translate-y-0.5 shadow-sm transition-all group/cert">
+
+                        <!-- Cert 2: Professional Cloud Architect (Google Cloud) -->
+                        <a href="https://shorturl.at/29QBc" target="_blank" rel="noopener noreferrer"
+                            class="glass-card block p-4 rounded-xl border border-white/10 hover:border-cyan-500/40 transition-all group">
                             <div class="flex justify-between items-center">
-                                <div>
-                                    <h5
-                                        class="text-slate-900 font-semibold group-hover/cert:text-indigo-600 transition-colors">
-                                        Vertex AI Technical Expert</h5>
-                                    <p class="text-slate-500 mt-1">Google Cloud</p>
+                                <div class="flex items-center gap-3.5">
+                                    <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold text-sm">
+                                        GCP
+                                    </div>
+                                    <div>
+                                        <h5 class="text-slate-900 dark:text-white font-bold text-sm group-hover:text-cyan-400 transition-colors">
+                                            Professional Cloud Architect
+                                        </h5>
+                                        <p class="text-slate-400 text-xs mt-0.5">Google Cloud • Verified Certification</p>
+                                    </div>
                                 </div>
-                                <svg class="w-6 h-6 text-slate-400 group-hover/cert:text-indigo-600 group-hover/cert:translate-x-0.5 transition-all"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                <svg class="w-5 h-5 text-slate-500 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                 </svg>
                             </div>
                         </a>
-                        <a href="https://www.credly.com/badges/76750356-805f-45d0-91e2-fb5ea6df6570/public_url" target="_blank"
-                            class="block p-4 rounded-2xl bg-white border border-slate-200/85 hover:border-indigo-500/50 hover:-translate-y-0.5 shadow-sm transition-all group/cert">
+
+                        <!-- Cert 3: Build with Vertex AI Technical Expert -->
+                        <a href="https://shorturl.at/2OJi9" target="_blank" rel="noopener noreferrer"
+                            class="glass-card block p-4 rounded-xl border border-white/10 hover:border-purple-500/40 transition-all group">
                             <div class="flex justify-between items-center">
-                                <div>
-                                    <h5
-                                        class="text-slate-900 font-semibold group-hover/cert:text-indigo-600 transition-colors">
-                                        Claude Certified Architect – Foundations</h5>
-                                    <p class="text-slate-500 mt-1">Anthropic</p>
+                                <div class="flex items-center gap-3.5">
+                                    <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 font-bold text-sm">
+                                        VAI
+                                    </div>
+                                    <div>
+                                        <h5 class="text-slate-900 dark:text-white font-bold text-sm group-hover:text-purple-400 transition-colors">
+                                            Build with Vertex AI – Technical Expert
+                                        </h5>
+                                        <p class="text-slate-400 text-xs mt-0.5">Google Cloud • Verified Credential</p>
+                                    </div>
                                 </div>
-                                <svg class="w-6 h-6 text-slate-400 group-hover/cert:text-indigo-600 group-hover/cert:translate-x-0.5 transition-all"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                <svg class="w-5 h-5 text-slate-500 group-hover:text-purple-400 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                 </svg>
                             </div>
                         </a>
-                        <div
-                            class="block p-4 rounded-2xl bg-white border border-slate-200/85 hover:border-indigo-500/50 hover:-translate-y-0.5 shadow-sm transition-all group/cert">
+
+                        <!-- Award: Excellence Award (3x) -->
+                        <div class="glass-card p-4 rounded-xl border border-white/10">
                             <div class="flex justify-between items-center">
-                                <div>
-                                    <h5
-                                        class="text-slate-900 font-semibold group-hover/cert:text-indigo-600 transition-colors">
-                                        Excellence Award (3x)</h5>
-                                    <p class="text-slate-500 mt-1">HashedIn by Deloitte</p>
+                                <div class="flex items-center gap-3.5">
+                                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 font-bold text-sm">
+                                        ★ 3×
+                                    </div>
+                                    <div>
+                                        <h5 class="text-slate-900 dark:text-white font-bold text-sm">
+                                            Excellence Award (3×) for Delivery
+                                        </h5>
+                                        <p class="text-slate-400 text-xs mt-0.5">HashedIn by Deloitte • High-Impact Enterprise Deliveries</p>
+                                    </div>
                                 </div>
-                                <svg class="w-6 h-6 text-slate-400 group-hover/cert:text-indigo-600 group-hover/cert:translate-x-0.5 transition-all"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                                </svg>
+                                <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-amber-500/10 text-amber-300 border border-amber-500/20">
+                                    Deloitte Honors
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Education Column -->
+                <!-- Education Column (5 Cols) -->
                 <div class="lg:col-span-5 animate-on-scroll" style="animation-delay: 0.1s;">
-                    <h2 class="font-display font-bold text-4xl text-slate-900 mb-8">Education</h2>
-                    <div class="glass-card p-8 rounded-3xl border-slate-200/80">
-                        <h4 class="text-slate-900 text-lg font-bold flex items-center justify-between">
-                            B.E., Computer Science & Eng.
-                            <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded-md">87%</span>
-                        </h4>
-                        <p class="text-slate-600 text-sm mt-3">V.S.B Engineering College, Karur</p>
-                        <p class="text-slate-500 text-sm mt-1">2020 - 2024</p>
-                        <hr class="my-5 border-slate-200/60">
-                        <p class="text-slate-700 font-semibold text-xs uppercase tracking-wider mb-2">Key Coursework</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs text-slate-600">DSA</span>
-                            <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs text-slate-600">DBMS</span>
-                            <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs text-slate-600">Operating Systems</span>
-                            <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs text-slate-600">Networks</span>
-                            <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full text-xs text-slate-600">Machine Learning</span>
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-mono font-semibold mb-3">
+                        <span>ACADEMIC FOUNDATION</span>
+                    </div>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 dark:text-white mb-6">
+                        Education
+                    </h2>
+
+                    <div class="glass-card p-7 rounded-2xl border border-white/10">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="text-slate-900 dark:text-white text-lg font-bold">
+                                B.E., Computer Science & Engineering
+                            </h4>
+                            <span class="px-2.5 py-1 bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-bold rounded-lg font-mono">
+                                87%
+                            </span>
+                        </div>
+                        <p class="text-indigo-400 text-sm font-medium">V.S.B. Engineering College, Karur</p>
+                        <p class="text-slate-400 text-xs mt-1 font-mono">2020 – 2024</p>
+
+                        <div class="my-6 border-t border-white/5"></div>
+
+                        <p class="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-3">Core Academic Specialization</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-slate-300">Distributed Systems</span>
+                            <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-slate-300">Data Structures & Algorithms</span>
+                            <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-slate-300">Database Management (DBMS)</span>
+                            <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-slate-300">Operating Systems</span>
+                            <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-slate-300">Computer Networks</span>
+                            <span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-slate-300">Machine Learning</span>
                         </div>
                     </div>
                 </div>
@@ -709,55 +1041,112 @@
         </div>
     </section>
 
-    <!-- Call to Action / Contact -->
+    <!-- ==========================================================================
+         CALL TO ACTION / CONTACT SECTION
+         ========================================================================== -->
     <section id="contact" class="py-24 relative z-10">
         <div class="max-w-4xl mx-auto px-6 text-center animate-on-scroll">
-            <h2 class="font-display text-5xl md:text-6xl font-bold text-slate-900 mb-6">Let's build the <span
-                    class="text-gradient-alt">future.</span></h2>
-            <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
-                Whether you're looking to build cutting-edge AI agents or robust full-stack systems, I'm open to
-                discussing new opportunities.
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-4">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Open for Opportunities • 2.5+ Years Experience</span>
+            </div>
+
+            <h2 class="font-display text-4xl sm:text-6xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight">
+                Let's build the <span class="text-gradient-alt">future of AI.</span>
+            </h2>
+
+            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Whether you're looking for an engineer to architect resilient autonomous multi-agent pipelines or build scalable full-stack cloud products, I'd love to connect.
             </p>
-            <div class="flex flex-wrap justify-center gap-4">
+
+            <div class="flex flex-wrap justify-center items-center gap-4">
+                <!-- Say Hello Email Button -->
                 <a href="mailto:sangavikavic@gmail.com"
-                    class="btn-primary px-8 py-4 rounded-full font-bold text-lg shadow-md hover:shadow-lg">
-                    Say Hello
+                    class="btn-primary px-8 py-4 rounded-xl font-bold text-sm shadow-xl flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <span>Say Hello</span>
                 </a>
-                <a href="https://github.com/sangavikavi/" target="_blank"
-                    class="btn-outline px-8 py-4 rounded-full font-bold text-lg flex items-center gap-2 bg-slate-50 border-slate-200 hover:bg-slate-100">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+
+                <!-- One-Click Copy Email Button -->
+                <button class="copy-email-btn btn-outline px-6 py-4 rounded-xl font-semibold text-sm flex items-center gap-2">
+                    <svg class="w-4 h-4 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                    <span>Copy Email</span>
+                </button>
+
+                <!-- GitHub Profile -->
+                <a href="https://github.com/sangavikavi/" target="_blank" rel="noopener noreferrer"
+                    class="btn-outline px-6 py-4 rounded-xl font-semibold text-sm flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path fill-rule="evenodd"
                             d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
                             clip-rule="evenodd" />
                     </svg>
-                    GitHub
+                    <span>GitHub</span>
+                </a>
+
+                <!-- Download Resume Direct -->
+                <a href="Sangavi_resume.pdf" download="Sangavi_C_Resume.pdf"
+                    class="btn-outline px-6 py-4 rounded-xl font-semibold text-sm flex items-center gap-2">
+                    <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <span>Download Resume</span>
                 </a>
             </div>
-            <p class="mt-8 text-slate-500 text-sm">sangavikavic@gmail.com</p>
+
+            <!-- Direct Contact Details -->
+            <div class="mt-10 flex flex-wrap justify-center items-center gap-6 text-sm text-slate-400 font-mono">
+                <a href="mailto:sangavikavic@gmail.com" class="hover:text-indigo-400 transition-colors">sangavikavic@gmail.com</a>
+                <span>•</span>
+                <a href="tel:+917010846735" class="hover:text-indigo-400 transition-colors">+91-7010846735</a>
+                <span>•</span>
+                <span>Bengaluru, India</span>
+            </div>
         </div>
     </section>
 
-    <footer class="border-t border-slate-200/60 bg-slate-50 py-10 relative z-10 text-center">
-        <div class="flex justify-center gap-6 mb-4">
-            <a href="https://www.linkedin.com/in/sangavi-c-649382204/" target="_blank"
-                class="text-slate-500 hover:text-indigo-600 transition-colors">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </svg>
-            </a>
-            <a href="https://github.com/sangavikavi/" target="_blank"
-                class="text-slate-500 hover:text-indigo-600 transition-colors">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd"
-                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                        clip-rule="evenodd" />
-                </svg>
-            </a>
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
+    <footer class="border-t border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-slate-950 py-12 relative z-10 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-center gap-6 mb-6">
+                <a href="https://linkedin.com/in/sangavi-c" target="_blank" rel="noopener noreferrer"
+                    class="text-slate-400 hover:text-indigo-400 transition-colors p-2" aria-label="LinkedIn">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/sangavikavi/" target="_blank" rel="noopener noreferrer"
+                    class="text-slate-400 hover:text-indigo-400 transition-colors p-2" aria-label="GitHub">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+            <p class="text-slate-400 text-xs sm:text-sm">
+                © <span id="year"></span> Sangavi C. Architected with Agentic AI & Modern Cloud Standards.
+            </p>
         </div>
-        <p class="text-slate-500 text-sm">© <span id="year"></span> Sangavi C. All rights reserved.</p>
     </footer>
 
+    <!-- Fixed Toast Notification Banner -->
+    <div id="toast-notification" class="glass-card px-5 py-3.5 rounded-xl border border-indigo-500/40 flex items-center gap-3 shadow-2xl">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+        <span class="text-xs font-semibold text-slate-100" id="toast-message">Notification</span>
+    </div>
+
+    <!-- Scripts -->
     <script src="js/main.js"></script>
 </body>
 
