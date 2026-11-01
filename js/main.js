@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Theme Toggle (Dark Mode default for high-end AI engineering aesthetic)
     const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle-btn');
     const htmlElement = document.documentElement;
 
     const savedTheme = localStorage.getItem('portfolio-theme');
@@ -21,39 +22,61 @@ document.addEventListener('DOMContentLoaded', () => {
         updateThemeIcon(true);
     }
 
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
-            const isDark = htmlElement.classList.toggle('dark');
-            localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light');
-            updateThemeIcon(isDark);
+    function toggleTheme() {
+        const isDark = htmlElement.classList.toggle('dark');
+        localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light');
+        updateThemeIcon(isDark);
+    }
+
+    if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+    if (mobileThemeToggleBtn) mobileThemeToggleBtn.addEventListener('click', toggleTheme);
+
+    function updateThemeIcon(isDark) {
+        const sunIcons = [document.getElementById('theme-sun-icon'), document.getElementById('mobile-sun-icon')];
+        const moonIcons = [document.getElementById('theme-moon-icon'), document.getElementById('mobile-moon-icon')];
+        
+        sunIcons.forEach(icon => {
+            if (icon) {
+                if (isDark) icon.classList.remove('hidden');
+                else icon.classList.add('hidden');
+            }
+        });
+
+        moonIcons.forEach(icon => {
+            if (icon) {
+                if (isDark) icon.classList.add('hidden');
+                else icon.classList.remove('hidden');
+            }
         });
     }
 
-    function updateThemeIcon(isDark) {
-        const sunIcon = document.getElementById('theme-sun-icon');
-        const moonIcon = document.getElementById('theme-moon-icon');
-        if (sunIcon && moonIcon) {
-            if (isDark) {
-                sunIcon.classList.remove('hidden');
-                moonIcon.classList.add('hidden');
-            } else {
-                sunIcon.classList.add('hidden');
-                moonIcon.classList.remove('hidden');
-            }
-        }
-    }
-
-    // 3. Mobile Menu Toggle
+    // 3. Mobile Menu Toggle with Hamburger <-> Close Icon Animation
     const menuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
     if (menuBtn && mobileMenu) {
         menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            if (hamburgerIcon && closeIcon) {
+                if (!isHidden) {
+                    hamburgerIcon.classList.add('hidden');
+                    closeIcon.classList.remove('hidden');
+                } else {
+                    hamburgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                }
+            }
         });
 
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
+                if (hamburgerIcon && closeIcon) {
+                    hamburgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                }
             });
         });
     }

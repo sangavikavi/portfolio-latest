@@ -262,6 +262,24 @@ html:not(.dark) .btn-outline:hover {
     scrollbar-width: thin;
 }
 
+@media (max-width: 640px) {
+    .code-body {
+        padding: 14px 16px;
+        font-size: 0.74rem;
+        line-height: 1.5;
+        min-height: 230px;
+        max-height: 300px;
+    }
+}
+
+.scrollbar-none::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 .token-keyword { color: #f43f5e; font-weight: 500; }
 .token-string { color: #10b981; }
 .token-function { color: #60a5fa; }
