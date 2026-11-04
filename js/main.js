@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'profile': `<pre><code><span class="token-keyword">const</span> <span class="token-function">engineerProfile</span> <span class="token-keyword">=</span> {
   <span class="token-property">name</span>: <span class="token-string">"Sangavi C"</span>,
   <span class="token-property">role</span>: <span class="token-string">"Software Development Engineer – AI"</span>,
-  <span class="token-property">experience</span>: <span class="token-badge">"2.5+ Years"</span>,
+  <span class="token-property">experience</span>: <span class="token-badge">"2.6+ Years"</span>,
   <span class="token-property">company</span>: <span class="token-string">"HashedIn by Deloitte"</span>,
   <span class="token-property">location</span>: <span class="token-string">"Bengaluru, India"</span>,
 
